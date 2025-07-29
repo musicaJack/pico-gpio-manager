@@ -16,13 +16,13 @@ const BoardImage: React.FC<BoardImageProps> = ({ className }) => {
   const getBoardImagePath = (boardVersion: string): string => {
     switch (boardVersion) {
       case 'board-1':
-        return '/board-imgs/board-1.png';
+        return '/gpio-manager/board-imgs/board-1.png';
       case 'board-2':
-        return '/board-imgs/board-2.png';
+        return '/gpio-manager/board-imgs/board-2.png';
       case 'board-3':
-        return '/board-imgs/board-3.png';
+        return '/gpio-manager/board-imgs/board-3.png';
       default:
-        return '/board-imgs/board-1.png';
+        return '/gpio-manager/board-imgs/board-1.png';
     }
   };
 
@@ -48,7 +48,9 @@ const BoardImage: React.FC<BoardImageProps> = ({ className }) => {
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
-                target.parentElement!.innerHTML = '<div class="image-error">图片加载失败</div>';
+                if (target.parentElement) {
+                  target.parentElement.innerHTML = '<div class="image-error">图片加载失败</div>';
+                }
               }}
             />
             <div className="board-image-overlay">
@@ -76,7 +78,9 @@ const BoardImage: React.FC<BoardImageProps> = ({ className }) => {
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
-              target.parentElement!.innerHTML = '<div class="modal-image-error">图片加载失败</div>';
+              if (target.parentElement) {
+                target.parentElement.innerHTML = '<div class="modal-image-error">图片加载失败</div>';
+              }
             }}
           />
         </div>
