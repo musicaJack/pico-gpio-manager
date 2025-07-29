@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend
+    container_name: gpio-manager-frontend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - gpio-network
+    environment:
+      - NGINX_HOST=www.bedigital.cn
+    volumes:
+      - frontend_logs:/var/log/nginx
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: backend
+    container_name: gpio-manager-backend
+    ports:
+      - "8081:3001"
+    restart: unless-stopped
+    networks:
+      - gpio-network
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - CORS_ORIGIN=https://www.bedigital.cn
+    volumes:
+      - ./data:/app/data
+      - backend_logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  gpio-network:
+    driver: bridge
+
+volumes:
+  frontend_logs:
+  backend_logs: 
