@@ -26,19 +26,19 @@ services:
       target: backend
     container_name: gpio-manager-backend
     ports:
-      - "8081:3001"
+      - "8081:5000"
     restart: unless-stopped
     networks:
       - gpio-network
     environment:
       - NODE_ENV=production
-      - PORT=3001
+      - PORT=5000
       - CORS_ORIGIN=https://www.bedigital.cn
     volumes:
       - ./data:/app/data
       - backend_logs:/app/logs
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
       interval: 30s
       timeout: 10s
       retries: 3

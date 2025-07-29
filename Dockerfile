@@ -68,11 +68,11 @@ COPY --from=builder /app/backend/node_modules ./node_modules
 RUN apk add --no-cache curl
 
 # 暴露端口
-EXPOSE 3001
+EXPOSE 5000
 
 # 健康检查
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:3001/health || exit 1
+  CMD curl -f http://localhost:5000/health || exit 1
 
 # 启动命令
 CMD ["node", "dist/server.js"] 
