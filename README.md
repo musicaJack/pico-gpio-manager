@@ -6,309 +6,491 @@
 ![React](https://img.shields.io/badge/React-18.0+-61dafb?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178c6?logo=typescript)
 ![Node.js](https://img.shields.io/badge/Node.js-18.0+-339933?logo=node.js)
+![Docker](https://img.shields.io/badge/Docker-20.0+-2496ed?logo=docker)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-**专业的RP2040引脚管理系统 - 可视化配置、冲突检测、代码生成**
+**Professional RP2040 Pin Management System - Visual Configuration, Conflict Detection, Code Generation**
 
-[在线演示](#) | [功能特性](#功能特性) | [快速开始](#快速开始) | [项目结构](#项目结构)
+[Live Demo](https://www.bedigital.cn/gpio-manager/) | [Features](#features) | [Quick Start](#quick-start) | [Deployment](#deployment)
 
 </div>
 
 ---
 
-## 📖 项目简介
+## 📖 Project Overview
 
-RP2040 GPIO Manager 是一个专为Raspberry Pi RP2040微控制器设计的现代化引脚管理系统。通过直观的可视化界面，帮助嵌入式开发者高效管理引脚分配、检测硬件冲突、优化资源使用，并自动生成初始化代码。
+RP2040 GPIO Manager is a modern pin management system designed specifically for the Raspberry Pi RP2040 microcontroller. Through an intuitive visual interface, it helps embedded developers efficiently manage pin assignments, detect hardware conflicts, optimize resource usage, and automatically generate initialization code.
 
-### 🎯 核心价值
+### 🎯 Core Value
 
-- **可视化引脚管理** - 直观的RP2040芯片图形界面，实时显示引脚状态
-- **多板卡支持** - 支持多种RP2040开发板配置，灵活切换
-- **智能冲突检测** - 自动检测硬件、时序、功耗冲突
-- **代码自动生成** - 支持C、Python、JavaScript代码生成
-- **专业级功能** - 硬件抽象层、资源优化、可靠性分析
-
----
-
-## ✨ 功能特性
-
-### 🔧 核心功能
-- **引脚可视化** - 实时显示RP2040引脚状态和分配情况
-- **模块管理** - 支持多种外设模块配置（SPI、I2C、UART、GPIO等）
-- **冲突检测** - 智能检测引脚冲突、时序冲突、功耗超限
-- **代码生成** - 自动生成初始化代码（C/Python/JavaScript）
-- **配置导入导出** - 支持JSON格式配置文件的导入导出
-
-### 🎨 界面特性
-- **响应式设计** - 完美适配2K/4K高分辨率屏幕
-- **现代化UI** - 基于Ant Design 5.x的优雅界面
-- **实时更新** - 动态加载不同板卡配置
-- **交互友好** - 点击引脚查看详细信息，拖拽分配模块
-
-### 📊 数据管理
-- **多板卡支持** - 1号板、2号板、3号板配置
-- **模块类型** - TFT-LCD、MicroSD、摇杆、放大器、麦克风、UART、按钮、IO扩展
-- **接口支持** - SPI0/1、I2C0/1、UART0/1、I2S、PWM、ADC
-- **状态监控** - 实时显示引脚使用率、功耗统计
+- **Visual Pin Management** - Intuitive RP2040 chip graphical interface with real-time pin status
+- **Multi-Board Support** - Support for various RP2040 development board configurations
+- **Smart Conflict Detection** - Automatic detection of hardware, timing, and power conflicts
+- **Code Generation** - Support for C, Python, JavaScript code generation
+- **Professional Features** - Hardware abstraction layer, resource optimization, reliability analysis
+- **Mobile Responsive** - Perfect support for mobile devices and tablets
 
 ---
 
-## 🚀 快速开始
+## ✨ Features
 
-### 环境要求
+### 🔧 Core Features
+- **Pin Visualization** - Real-time display of RP2040 pin status and assignments
+- **Module Management** - Support for various peripheral module configurations (SPI, I2C, UART, GPIO, etc.)
+- **Conflict Detection** - Intelligent detection of pin conflicts, timing conflicts, and power limits
+- **Code Generation** - Automatic generation of initialization code (C/Python/JavaScript)
+- **Configuration Import/Export** - Support for JSON format configuration files
+- **Multi-Board Switching** - Support for Board 1, Board 2, Board 3 configurations
+
+### 🎨 Interface Features
+- **Responsive Design** - Perfect adaptation for desktop, tablet, and mobile devices
+- **Modern UI** - Elegant interface based on Ant Design 5.x
+- **Real-time Updates** - Dynamic loading of different board configurations
+- **User-friendly Interaction** - Click pins to view details, drag and drop module assignments
+- **Mobile Optimization** - Touch-friendly mobile interface
+
+### 📊 Data Management
+- **Multi-Board Support** - Board 1, Board 2, Board 3 configurations
+- **Module Types** - TFT-LCD, MicroSD, Joystick, Amplifier, Microphone, UART, Button, IO Expansion
+- **Interface Support** - SPI0/1, I2C0/1, UART0/1, I2S, PWM, ADC
+- **Status Monitoring** - Real-time display of pin usage and power statistics
+
+---
+
+## 🚀 Quick Start
+
+### Requirements
 
 - **Node.js** >= 18.0.0
 - **npm** >= 8.0.0
-- **操作系统** - Windows 10/11, macOS, Linux
+- **Operating System** - Windows 10/11, macOS, Linux
 
-### 安装步骤
+### Local Development
 
-1. **克隆项目**
+1. **Clone the project**
 ```bash
 git clone https://github.com/your-username/pico-gpio-manager.git
 cd pico-gpio-manager
 ```
 
-2. **安装依赖**
+2. **Install dependencies**
 ```bash
-# 安装后端依赖
-cd backend
-npm install
-
-# 安装前端依赖
-cd ../frontend
-npm install
+# Install all dependencies
+npm run install:all
 ```
 
-3. **启动开发服务器**
+3. **Start development server**
 
-**方法一：手动启动**
+**Method 1: Manual start**
 ```bash
-# 启动后端服务器 (端口5000)
-cd backend
-npm run dev
+# Start backend server (port 5000)
+npm run dev:backend
 
-# 启动前端服务器 (端口3000)
-cd frontend
-npm run dev
+# Start frontend server (port 3000)
+npm run dev:frontend
 ```
 
-**方法二：使用批处理脚本 (Windows)**
+**Method 2: Use batch script (Windows)**
 ```bash
-# 启动前后端
+# Start both frontend and backend
 start-dev.bat
 ```
 
-4. **访问应用**
+4. **Access the application**
 ```
-前端: http://localhost:3000
-后端API: http://localhost:5000
+Frontend: http://localhost:3000
+Backend API: http://localhost:5000
 ```
 
-### 生产部署
+### Production Deployment
 
 ```bash
-# 构建前端
-cd frontend
-npm run build
+# Build frontend
+npm run build:frontend
 
-# 启动生产服务器
-cd backend
-npm run start
+# Start production server
+npm run start:backend
 ```
 
 ---
 
-## 📁 项目结构
+## 🐳 Docker Deployment
+
+### Quick Deployment
+
+1. **Clone the project**
+```bash
+git clone <your-repository-url>
+cd pico-gpio-manager
+```
+
+2. **Configure Nginx**
+Add the configuration from `nginx-config-example.conf` to your Nginx configuration file.
+
+3. **Deploy Docker services**
+```bash
+# Give execute permission to deployment script
+chmod +x deploy.sh
+
+# Run deployment script
+./deploy.sh
+```
+
+4. **Restart Nginx**
+```bash
+# Test configuration
+sudo nginx -t
+
+# Reload configuration
+sudo systemctl reload nginx
+```
+
+### Production Environment Deployment
+
+1. **Server environment preparation**
+```bash
+# Download initialization script
+wget https://raw.githubusercontent.com/your-repo/pico-gpio-manager/main/production-setup.sh
+chmod +x production-setup.sh
+
+# Run initialization
+./production-setup.sh
+```
+
+2. **Download code and deploy**
+```bash
+cd /opt/gpio-manager
+git clone <your-repository-url> .
+chmod +x deploy-production.sh
+./deploy-production.sh
+```
+
+### Docker Service Configuration
+
+- **frontend**: Frontend service running on port 8080
+- **backend**: Backend service running on port 8081
+- **networks**: Custom network configuration
+- **volumes**: Log and data persistence
+
+### Access URLs
+
+After deployment, you can access the application at:
+
+- **Main Application**: https://www.bedigital.cn/gpio-manager/
+- **API Interface**: https://www.bedigital.cn/gpio-manager/api/
+- **Health Check**: https://www.bedigital.cn/gpio-manager/health
+
+---
+
+## 📁 Project Structure
 
 ```
 pico-gpio-manager/
-├── frontend/                 # 前端React应用
+├── frontend/                 # Frontend React application
 │   ├── src/
-│   │   ├── components/       # React组件
-│   │   │   ├── common/       # 通用组件
-│   │   │   ├── layout/       # 布局组件
-│   │   │   ├── pins/         # 引脚相关组件
-│   │   │   └── modules/      # 模块相关组件
-│   │   ├── hooks/            # 自定义Hooks
-│   │   ├── stores/           # Zustand状态管理
-│   │   ├── services/         # 服务层
-│   │   ├── types/            # TypeScript类型定义
-│   │   └── utils/            # 工具函数
-│   ├── public/               # 静态资源
+│   │   ├── components/       # React components
+│   │   │   ├── common/       # Common components
+│   │   │   ├── layout/       # Layout components
+│   │   │   ├── pins/         # Pin-related components
+│   │   │   └── modules/      # Module-related components
+│   │   ├── hooks/            # Custom Hooks
+│   │   ├── stores/           # Zustand state management
+│   │   ├── services/         # Service layer
+│   │   ├── types/            # TypeScript type definitions
+│   │   └── utils/            # Utility functions
+│   ├── public/               # Static resources
+│   │   └── board-imgs/       # Board images
 │   └── package.json
-├── backend/                  # 后端Node.js应用
+├── backend/                  # Backend Node.js application
 │   ├── src/
-│   │   ├── controllers/      # 控制器
-│   │   ├── routes/           # 路由定义
-│   │   ├── services/         # 服务层
-│   │   ├── config/           # 配置文件
-│   │   └── utils/            # 工具函数
-│   ├── data/                 # 数据文件
-│   │   ├── boards/           # 板卡配置
-│   │   └── configs/          # 系统配置
+│   │   ├── controllers/      # Controllers
+│   │   ├── routes/           # Route definitions
+│   │   ├── services/         # Service layer
+│   │   ├── config/           # Configuration files
+│   │   └── utils/            # Utility functions
+│   ├── data/                 # Data files
+│   │   ├── boards/           # Board configurations
+│   │   ├── configs/          # System configurations
+│   │   └── templates/        # Configuration templates
 │   └── package.json
-├── docs/                     # 文档
-├── scripts/                  # 脚本文件
+├── docker/                   # Docker configuration
+│   └── nginx-frontend.conf   # Frontend Nginx configuration
+├── scripts/                  # Script files
+├── Dockerfile                # Multi-stage build file
+├── docker-compose.yml        # Docker Compose configuration
+├── deploy.sh                 # Deployment script
+├── deploy-production.sh      # Production deployment script
 └── README.md
 ```
 
 ---
 
-## 🎮 使用指南
+## 🎮 User Guide
 
-### 基本操作
+### Basic Operations
 
-1. **选择板卡版本**
-   - 在顶部下拉菜单中选择对应的RP2040开发板版本
-   - 系统会自动加载对应的引脚和模块配置
+1. **Select Board Version**
+   - Choose the corresponding RP2040 development board version from the top dropdown
+   - The system will automatically load the corresponding pin and module configurations
 
-2. **查看引脚状态**
-   - 左侧显示RP2040芯片图形界面
-   - 绿色：可用引脚
-   - 蓝色：已用引脚
-   - 橙色：冲突引脚
-   - 红色：关键引脚
+2. **View Pin Status**
+   - Left side displays the RP2040 chip graphical interface
+   - Green: Available pins
+   - Blue: Used pins
+   - Orange: Conflicted pins
+   - Red: Critical pins
 
-3. **查看引脚详情**
-   - 点击任意引脚查看详细信息
-   - 右侧面板显示引脚功能、电压、状态、所属模块
+3. **View Pin Details**
+   - Click any pin to view detailed information
+   - Right panel displays pin functions, voltage, status, and associated modules
 
-4. **管理模块配置**
-   - 右侧底部显示当前板卡的模块配置
-   - 按类型分组显示（显示屏、存储卡、摇杆等）
-   - 可查看模块的引脚分配、功耗信息
+4. **Manage Module Configuration**
+   - Bottom right displays current board module configurations
+   - Grouped by type (display, storage card, joystick, etc.)
+   - View module pin assignments and power information
 
-### 高级功能
+### Advanced Features
 
-- **引脚分配** - 拖拽方式分配引脚给模块
-- **冲突检测** - 系统自动检测并提示冲突
-- **代码生成** - 导出初始化代码
-- **配置备份** - 导入导出配置文件
-
----
-
-## 🔧 技术栈
-
-### 前端技术
-- **React 18** - 现代化UI框架
-- **TypeScript** - 类型安全的JavaScript
-- **Ant Design 5.x** - 企业级UI组件库
-- **Zustand** - 轻量级状态管理
-- **Vite** - 快速构建工具
-- **Canvas API** - 引脚可视化渲染
-
-### 后端技术
-- **Node.js** - JavaScript运行时
-- **Express** - Web应用框架
-- **TypeScript** - 类型安全
-- **JSON文件存储** - 轻量级数据存储
-- **RESTful API** - 标准接口设计
-
-### 开发工具
-- **ESLint** - 代码质量检查
-- **Prettier** - 代码格式化
-- **ts-node-dev** - 开发环境热重载
+- **Pin Assignment** - Drag and drop method to assign pins to modules
+- **Conflict Detection** - System automatically detects and prompts conflicts
+- **Code Generation** - Export initialization code
+- **Configuration Backup** - Import/export configuration files
 
 ---
 
-## 📊 支持的板卡配置
+## 🔧 Technology Stack
 
-### 1号板 - 多功能开发板
-- **Quectel 4G-LTE模块** (UART0)
-- **USB转TTL模块** (UART0)
-- **TFT-LCD显示屏** (SPI0)
-- **IO扩展接口** (I2C1)
-- **总功耗**: 1419mW
+### Frontend Technologies
+- **React 18** - Modern UI framework
+- **TypeScript** - Type-safe JavaScript
+- **Ant Design 5.x** - Enterprise-grade UI component library
+- **Zustand** - Lightweight state management
+- **Vite** - Fast build tool
+- **Canvas API** - Pin visualization rendering
 
-### 2号板 - 游戏开发板
-- **摇杆控制器** (I2C1)
-- **MicroSD卡** (SPI0)
-- **总功耗**: 264mW
+### Backend Technologies
+- **Node.js** - JavaScript runtime
+- **Express** - Web application framework
+- **TypeScript** - Type safety
+- **JSON File Storage** - Lightweight data storage
+- **RESTful API** - Standard interface design
 
-### 3号板 - 音频开发板
-- **功放模块** (I2S)
-- **拾音器** (I2S)
-- **UART通信** (UART0)
-- **按键模块** (GPIO)
-- **IO扩展** (I2C1)
-- **总功耗**: 892mW
+### Deployment Technologies
+- **Docker** - Containerized deployment
+- **Docker Compose** - Container orchestration
+- **Nginx** - Reverse proxy and static file serving
+- **Multi-stage Build** - Optimize image size
 
----
-
-## 🔌 支持的接口类型
-
-| 接口 | 描述 | 支持版本 |
-|------|------|----------|
-| SPI0/SPI1 | 串行外设接口 | 全支持 |
-| I2C0/I2C1 | 双线串行总线 | 全支持 |
-| UART0/UART1 | 通用异步收发器 | 全支持 |
-| I2S0/I2S1 | 数字音频接口 | 全支持 |
-| PWM | 脉冲宽度调制 | 全支持 |
-| ADC | 模数转换器 | 全支持 |
-| GPIO | 通用输入输出 | 全支持 |
+### Development Tools
+- **ESLint** - Code quality checking
+- **Prettier** - Code formatting
+- **ts-node-dev** - Development environment hot reload
 
 ---
 
-## 🤝 贡献指南
+## 📊 Supported Board Configurations
 
-我们欢迎所有形式的贡献！
+### Board 1 - Multi-function Development Board
+- **Quectel 4G-LTE Module** (UART0)
+- **USB to TTL Module** (UART0)
+- **TFT-LCD Display** (SPI0)
+- **IO Expansion Interface** (I2C1)
+- **Total Power**: 1419mW
 
-### 如何贡献
+### Board 2 - Game Development Board
+- **Joystick Controller** (I2C1)
+- **MicroSD Card** (SPI0)
+- **Total Power**: 264mW
 
-1. **Fork项目**
-2. **创建功能分支** (`git checkout -b feature/AmazingFeature`)
-3. **提交更改** (`git commit -m 'Add some AmazingFeature'`)
-4. **推送到分支** (`git push origin feature/AmazingFeature`)
-5. **创建Pull Request**
-
-### 开发规范
-
-- 遵循TypeScript编码规范
-- 使用ESLint进行代码检查
-- 提交信息使用约定式提交格式
-- 新功能需要添加相应的测试
+### Board 3 - Audio Development Board
+- **Amplifier Module** (I2S)
+- **Microphone** (I2S)
+- **UART Communication** (UART0)
+- **Button Module** (GPIO)
+- **IO Expansion** (I2C1)
+- **Total Power**: 892mW
 
 ---
 
-## 📝 更新日志
+## 🔌 Supported Interface Types
+
+| Interface | Description | Support Version |
+|-----------|-------------|-----------------|
+| SPI0/SPI1 | Serial Peripheral Interface | Full Support |
+| I2C0/I2C1 | Two-wire Serial Bus | Full Support |
+| UART0/UART1 | Universal Asynchronous Receiver/Transmitter | Full Support |
+| I2S0/I2S1 | Digital Audio Interface | Full Support |
+| PWM | Pulse Width Modulation | Full Support |
+| ADC | Analog-to-Digital Converter | Full Support |
+| GPIO | General Purpose Input/Output | Full Support |
+
+---
+
+## 📱 Mobile Support
+
+### Responsive Design
+- **Desktop** (≥769px): Full feature display
+- **Tablet** (768px): Optimized layout
+- **Mobile** (≤480px): Compact layout
+- **Small Mobile** (≤360px): Minimal layout
+
+### Mobile Features
+- Touch-friendly interface design
+- Adaptive fonts and spacing
+- Mobile-specific dropdown menu
+- Table horizontal scroll support
+- Optimized status card display
+
+---
+
+## 🛠️ Troubleshooting
+
+### Common Issues
+
+1. **Docker Permission Issues**
+   ```bash
+   # Re-login or run
+   newgrp docker
+   ```
+
+2. **Port Conflicts**
+   ```bash
+   # Check port usage
+   sudo lsof -i :8080
+   sudo lsof -i :8081
+   ```
+
+3. **Build Failures**
+   ```bash
+   # Clean and rebuild
+   docker-compose down
+   docker system prune -f
+   docker-compose build --no-cache
+   ```
+
+4. **Nginx Configuration Errors**
+   ```bash
+   # Check configuration syntax
+   sudo nginx -t
+   
+   # View error logs
+   sudo tail -f /var/log/nginx/error.log
+   ```
+
+### Log Locations
+
+- **Docker Logs**: `docker-compose logs`
+- **Nginx Logs**: `/var/log/nginx/`
+- **Application Logs**: Inside Docker containers
+
+---
+
+## 🔒 Security Configuration
+
+### Firewall Settings
+```bash
+# Only allow necessary ports
+sudo ufw allow 80
+sudo ufw allow 443
+# Ports 8080 and 8081 are not exposed externally, internal access only
+```
+
+### SSL Certificate
+Ensure your Nginx configuration has properly configured SSL certificates:
+```nginx
+ssl_certificate /path/to/your/certificate.crt;
+ssl_certificate_key /path/to/your/private.key;
+```
+
+---
+
+## 📈 Performance Optimization
+
+### Docker Optimization
+- Use multi-stage builds to reduce image size
+- Configure health checks to ensure service availability
+- Use Docker networks to isolate services
+
+### Nginx Optimization
+- Enable Gzip compression
+- Configure static file caching
+- Set appropriate timeout values
+
+### Frontend Optimization
+- Code splitting and lazy loading
+- Static resource compression
+- Responsive image optimization
+
+---
+
+## 🤝 Contributing
+
+We welcome all forms of contributions!
+
+### How to Contribute
+
+1. **Fork the project**
+2. **Create a feature branch** (`git checkout -b feature/AmazingFeature`)
+3. **Commit your changes** (`git commit -m 'Add some AmazingFeature'`)
+4. **Push to the branch** (`git push origin feature/AmazingFeature`)
+5. **Create a Pull Request**
+
+### Development Standards
+
+- Follow TypeScript coding standards
+- Use ESLint for code checking
+- Use conventional commit format for commit messages
+- Add corresponding tests for new features
+- Ensure mobile compatibility
+
+---
+
+## 📝 Changelog
+
+### v1.1.0 (2024-01-XX)
+- ✨ Added mobile responsive design
+- 🎨 Optimized mobile user experience
+- 🔧 Improved Docker deployment configuration
+- 📱 Added mobile dropdown menu
+- 🚀 Optimized table display for mobile
 
 ### v1.0.0 (2024-01-XX)
-- ✨ 初始版本发布
-- 🎨 现代化UI界面设计
-- 🔧 多板卡配置支持
-- 📊 引脚可视化功能
-- 🚀 响应式布局优化
+- ✨ Initial version release
+- 🎨 Modern UI interface design
+- 🔧 Multi-board configuration support
+- 📊 Pin visualization functionality
+- 🚀 Responsive layout optimization
 
 ---
 
-## 📄 许可证
+## 📄 License
 
-本项目采用 [MIT License](LICENSE) 许可证。
-
----
-
-## 🙏 致谢
-
-- [Raspberry Pi Foundation](https://www.raspberrypi.org/) - RP2040微控制器
-- [Ant Design](https://ant.design/) - 优秀的UI组件库
-- [React](https://reactjs.org/) - 强大的前端框架
-- [Node.js](https://nodejs.org/) - 高效的JavaScript运行时
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 📞 联系我们
+## 🙏 Acknowledgments
 
-- **项目主页**: [GitHub Repository](#)
-- **问题反馈**: [Issues](#)
-- **功能建议**: [Discussions](#)
-- **邮箱**: your-email@example.com
+- [Raspberry Pi Foundation](https://www.raspberrypi.org/) - RP2040 Microcontroller
+- [Ant Design](https://ant.design/) - Excellent UI component library
+- [React](https://reactjs.org/) - Powerful frontend framework
+- [Node.js](https://nodejs.org/) - Efficient JavaScript runtime
+- [Docker](https://www.docker.com/) - Containerization technology
+
+---
+
+## 📞 Contact Us
+
+- **Project Homepage**: [GitHub Repository](#)
+- **Issue Reports**: [Issues](#)
+- **Feature Suggestions**: [Discussions](#)
+- **Email**: your-email@example.com
 
 ---
 
 <div align="center">
 
-**如果这个项目对您有帮助，请给个⭐️支持一下！**
+**If this project helps you, please give it a ⭐️!**
 
 Made with ❤️ for the RP2040 community
 

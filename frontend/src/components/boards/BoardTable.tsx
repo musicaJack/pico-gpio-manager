@@ -180,7 +180,7 @@ const BoardTable: React.FC<BoardTableProps> = ({ boardData, boardName }) => {
           rowKey="gpio"
           pagination={false}
           size="small"
-          scroll={{ x: 1400 }}
+          scroll={{ x: 1400, y: 400 }}
           className="board-table"
           rowClassName={(record) => record.status === '未使用' ? 'unused-row' : ''}
         />

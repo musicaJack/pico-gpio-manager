@@ -275,14 +275,23 @@
 @media (max-width: 768px) {
   .board-table-container {
     height: auto;
+    min-height: 400px;
   }
   
   .board-table-card {
     height: auto;
+    min-height: 400px;
+  }
+  
+  .board-table-card .ant-card-body {
+    height: 350px;
+    overflow: hidden;
   }
   
   .board-table {
-    overflow-x: auto;
+    overflow: auto;
+    height: 100%;
+    -webkit-overflow-scrolling: touch; /* iOS 滚动优化 */
   }
   
   /* 移动端表格优化 */
@@ -315,10 +324,40 @@
     padding: 6px 12px;
     font-size: 10px;
   }
+  
+  /* 确保表格可以滚动 */
+  .board-table .ant-table-container {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .board-table .ant-table-content {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* 移动端专用滚动优化 */
+  .board-table .ant-table-body {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    max-height: 300px !important;
+  }
 }
 
 @media (max-width: 480px) {
   /* 小屏幕进一步优化 */
+  .board-table-container {
+    min-height: 350px;
+  }
+  
+  .board-table-card {
+    min-height: 350px;
+  }
+  
+  .board-table-card .ant-card-body {
+    height: 300px;
+  }
+  
   .board-table .ant-table-thead > tr > th,
   .board-table .ant-table-tbody > tr > td {
     padding: 2px 1px;
@@ -352,5 +391,117 @@
   .board-table .ant-table-thead > tr > th:nth-child(4),
   .board-table .ant-table-tbody > tr > td:nth-child(4) {
     display: none;
+  }
+  
+  /* 移动端专用滚动优化 */
+  .board-table .ant-table-body {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    max-height: 250px !important;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 360px) {
+  .board-table-container {
+    min-height: 300px;
+  }
+  
+  .board-table-card {
+    min-height: 300px;
+  }
+  
+  .board-table-card .ant-card-body {
+    height: 250px;
+  }
+  
+  .board-table .ant-table-thead > tr > th,
+  .board-table .ant-table-tbody > tr > td {
+    padding: 1px 1px;
+    font-size: 8px;
+  }
+  
+  .board-table-card .ant-card-head-title {
+    font-size: 10px;
+  }
+  
+  .pin-number {
+    font-size: 7px;
+    padding: 1px 2px;
+  }
+  
+  .status-tag {
+    font-size: 7px;
+    padding: 1px 2px;
+  }
+  
+  .description {
+    font-size: 7px;
+  }
+  
+  .table-footer {
+    padding: 3px 6px;
+    font-size: 8px;
+  }
+  
+  /* 移动端专用滚动优化 */
+  .board-table .ant-table-body {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    max-height: 200px !important;
+  }
+}
+
+/* 移动端滚动优化 */
+@media (max-width: 768px) {
+  /* 确保表格容器可以滚动 */
+  .board-table-container {
+    overflow: visible;
+  }
+  
+  .board-table-card {
+    overflow: visible;
+  }
+  
+  .board-table-card .ant-card-body {
+    overflow: hidden;
+  }
+  
+  /* 表格内容区域滚动 */
+  .board-table {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    max-height: none;
+  }
+  
+  /* Ant Design 表格滚动优化 */
+  .ant-table-wrapper {
+    overflow: visible;
+  }
+  
+  .ant-table {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  .ant-table-container {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  .ant-table-content {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  .ant-table-body {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  /* 强制启用触摸滚动 */
+  .ant-table-body {
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth;
   }
 } 
