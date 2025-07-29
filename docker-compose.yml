@@ -11,7 +11,7 @@ services:
       - "8080:80"
     restart: unless-stopped
     networks:
-      - gpio-network
+      - geotracker_baidu_map_network
     environment:
       - NGINX_HOST=www.bedigital.cn
     volumes:
@@ -29,7 +29,7 @@ services:
       - "8081:5000"
     restart: unless-stopped
     networks:
-      - gpio-network
+      - geotracker_baidu_map_network
     environment:
       - NODE_ENV=production
       - PORT=5000
@@ -45,8 +45,8 @@ services:
       start_period: 40s
 
 networks:
-  gpio-network:
-    driver: bridge
+  geotracker_baidu_map_network:
+    external: true
 
 volumes:
   frontend_logs:
