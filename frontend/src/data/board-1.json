@@ -1,0 +1,268 @@
+{
+  "boardId": "board-1",
+  "boardName": "1号主板",
+  "version": "v1.0",
+  "lastUpdate": "2025年7月",
+  "totalPins": 20,
+  "usedPins": 20,
+  "modules": [
+    {
+      "name": "UART通信",
+      "type": "UART",
+      "pins": [
+        {
+          "gpio": "GPIO0",
+          "function": "TX",
+          "description": "IO扩展发送数据",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO1", 
+          "function": "RX",
+          "description": "IO扩展接收数据",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO8",
+          "function": "TX", 
+          "description": "USB-TTL发送数据",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO9",
+          "function": "RX",
+          "description": "USB-TTL接收数据", 
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO12",
+          "function": "TX",
+          "description": "4G模块发送数据",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO13",
+          "function": "RX", 
+          "description": "4G模块接收数据",
+          "status": "已占用"
+        }
+      ]
+    },
+    {
+      "name": "TFT-LCD (SPI-0)",
+      "type": "SPI",
+      "pins": [
+        {
+          "gpio": "GPIO10",
+          "function": "BL",
+          "description": "LCD背光控制",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO15",
+          "function": "RST",
+          "description": "LCD重置信号",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO17",
+          "function": "CS",
+          "description": "LCD片选信号",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO18",
+          "function": "SCL",
+          "description": "LCD时钟线",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO19",
+          "function": "SDA",
+          "description": "LCD数据线",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO20",
+          "function": "DC",
+          "description": "LCD数据/命令选择",
+          "status": "已占用"
+        }
+      ]
+    },
+    {
+      "name": "摇杆 (I2C-1)",
+      "type": "I2C",
+      "pins": [
+        {
+          "gpio": "GPIO6",
+          "function": "SDA",
+          "description": "I2C数据线",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO7",
+          "function": "SCL",
+          "description": "I2C时钟线",
+          "status": "已占用"
+        }
+      ]
+    }
+  ],
+  "allPins": [
+    {
+      "gpio": "GPIO0",
+      "uart": "TX",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "IO扩展发送数据",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO1",
+      "uart": "RX",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "IO扩展接收数据",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO6",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "SDA",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "I2C数据线",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO7",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "SCL",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "I2C时钟线",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO8",
+      "uart": "TX",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "USB-TTL发送数据",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO9",
+      "uart": "RX",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "USB-TTL接收数据",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO10",
+      "uart": "-",
+      "tftLcd": "BL",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "LCD背光控制",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO12",
+      "uart": "TX",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "4G模块发送数据",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO13",
+      "uart": "RX",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "4G模块接收数据",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO15",
+      "uart": "-",
+      "tftLcd": "RST",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "LCD重置信号",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO17",
+      "uart": "-",
+      "tftLcd": "CS",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "LCD片选信号",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO18",
+      "uart": "-",
+      "tftLcd": "SCL",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "LCD时钟线",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO19",
+      "uart": "-",
+      "tftLcd": "SDA",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "LCD数据线",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO20",
+      "uart": "-",
+      "tftLcd": "DC",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "description": "LCD数据/命令选择",
+      "status": "已占用"
+    }
+  ]
+} 

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>3号主板GPIO占用状态表</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        .gpio-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            box-shadow: 0 0 15px rgba(0, 150, 255, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .gpio-table caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px;
+            background-color: #0a3d62;
+            caption-side: top;
+        }
+        
+        .gpio-table th {
+            background-color: #1a5276;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .gpio-table td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid #2c3e50;
+        }
+        
+        .gpio-table tbody tr:nth-child(odd) {
+            background-color: #1e3c59;
+        }
+        
+        .gpio-table tbody tr:nth-child(even) {
+            background-color: #2a4d6e;
+        }
+        
+        .status-occupied {
+            color: #82e0aa;
+            font-weight: bold;
+        }
+        
+        .note {
+            font-size: 0.9em;
+            color: #85c1e9;
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table class="gpio-table">
+        <caption>3号主板GPIO占用状态表（按引脚正序排列）</caption>
+        <thead>
+            <tr>
+                <th>GPIO编号</th>
+                <th>UART通信</th>
+                <th>TFT-LCD (SPI-0)</th>
+                <th>MicroSD (SPI-1)</th>
+                <th>摇杆 (I2C-1)</th>
+                <th>功放 (I2S-0)</th>
+                <th>拾音器 (I2S-1)</th>
+                <th>开关控制</th>
+                <th>功能描述</th>
+                <th>状态</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GPIO00</td>
+                <td>TX</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>UART发送数据</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO01</td>
+                <td>RX</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>UART接收数据</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO02</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>L/R</td>
+                <td>-</td>
+                <td>拾音器声道选择</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO03</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SCK</td>
+                <td>-</td>
+                <td>拾音器位时钟信号</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO04</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>WS</td>
+                <td>-</td>
+                <td>拾音器字选择信号</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO05</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SD</td>
+                <td>-</td>
+                <td>拾音器音频数据输出</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO06</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SDA</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>摇杆数据线</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO07</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SCL</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>摇杆时钟线</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO08</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>按键1</td>
+                <td>用户按键1</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO09</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>按键2</td>
+                <td>用户按键2</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO10</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SCK</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SD卡时钟</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO11</td>
+                <td>-</td>
+                <td>-</td>
+                <td>MISO</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SD卡数据输入</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO12</td>
+                <td>-</td>
+                <td>-</td>
+                <td>MOSI</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SD卡数据输出</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO13</td>
+                <td>-</td>
+                <td>-</td>
+                <td>CS</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SD卡片选</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <!-- 新增GPIO14 -->
+            <tr>
+                <td>GPIO14</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>屏幕开关</td>
+                <td>屏幕电源控制</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO15</td>
+                <td>-</td>
+                <td>RST</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD复位</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO16</td>
+                <td>-</td>
+                <td>BL</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD背光控制</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO17</td>
+                <td>-</td>
+                <td>CS</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD片选</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO18</td>
+                <td>-</td>
+                <td>SCL</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD时钟线</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO19</td>
+                <td>-</td>
+                <td>SDA</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD数据线</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO20</td>
+                <td>-</td>
+                <td>DC</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD数据/命令切换</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO21</td>
+                <td>-</td>
+                <td>TE</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD清联信号</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <!-- 修改后的GPIO22 -->
+            <tr>
+                <td>GPIO22</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>XMT</td>
+                <td>-</td>
+                <td>静音开关</td>
+                <td>功放静音使能控制</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO26</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>DIN</td>
+                <td>-</td>
+                <td>-</td>
+                <td>功放音频数据输入</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO27</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>BCLK</td>
+                <td>-</td>
+                <td>-</td>
+                <td>功放位时钟信号</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO28</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LRCLK</td>
+                <td>-</td>
+                <td>-</td>
+                <td>功放左右声道时钟</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="note">
+        设计版本：v1.0 | 最后更新：2025年7月
+    </div>
+</body>
+</html>

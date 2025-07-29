@@ -1,0 +1,504 @@
+{
+  "boardId": "board-2",
+  "boardName": "2号主板",
+  "version": "v1.0",
+  "lastUpdate": "2025年7月",
+  "totalPins": 28,
+  "usedPins": 28,
+  "modules": [
+    {
+      "name": "UART通信",
+      "type": "UART",
+      "pins": [
+        {
+          "gpio": "GPIO0",
+          "function": "TX",
+          "description": "UART发送数据",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO1",
+          "function": "RX",
+          "description": "UART接收数据",
+          "status": "已占用"
+        }
+      ]
+    },
+    {
+      "name": "摇杆 (I2C-1)",
+      "type": "I2C",
+      "pins": [
+        {
+          "gpio": "GPIO6",
+          "function": "SDA",
+          "description": "摇杆数据线",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO7",
+          "function": "SCL",
+          "description": "摇杆时钟线",
+          "status": "已占用"
+        }
+      ]
+    },
+    {
+      "name": "按键控制",
+      "type": "GPIO",
+      "pins": [
+        {
+          "gpio": "GPIO8",
+          "function": "KEY-1",
+          "description": "用户按键1",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO9",
+          "function": "KEY-2",
+          "description": "用户按键2",
+          "status": "已占用"
+        }
+      ]
+    },
+    {
+      "name": "MicroSD (SPI-1)",
+      "type": "SPI",
+      "pins": [
+        {
+          "gpio": "GPIO10",
+          "function": "SCK",
+          "description": "SD卡时钟",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO11",
+          "function": "MISO",
+          "description": "SD卡数据输入",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO12",
+          "function": "MOSI",
+          "description": "SD卡数据输出",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO13",
+          "function": "CS",
+          "description": "SD卡片选",
+          "status": "已占用"
+        }
+      ]
+    },
+    {
+      "name": "TFT-LCD (SPI-0)",
+      "type": "SPI",
+      "pins": [
+        {
+          "gpio": "GPIO15",
+          "function": "RST",
+          "description": "LCD复位",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO16",
+          "function": "BL",
+          "description": "LCD背光控制",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO17",
+          "function": "CS",
+          "description": "LCD片选",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO18",
+          "function": "SCL",
+          "description": "LCD时钟线",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO19",
+          "function": "SDA",
+          "description": "LCD数据线",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO20",
+          "function": "DC",
+          "description": "LCD数据/命令切换",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO21",
+          "function": "TE",
+          "description": "LCD清联信号",
+          "status": "已占用"
+        }
+      ]
+    },
+    {
+      "name": "功放 (I2S-0)",
+      "type": "I2S",
+      "pins": [
+        {
+          "gpio": "GPIO22",
+          "function": "XMT",
+          "description": "功放静音使能",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO26",
+          "function": "DIN",
+          "description": "音频数据输入",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO27",
+          "function": "BCLK",
+          "description": "位时钟信号",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO28",
+          "function": "LRCLK",
+          "description": "左右声道时钟",
+          "status": "已占用"
+        }
+      ]
+    },
+    {
+      "name": "拾音器 (I2S-1)",
+      "type": "I2S",
+      "pins": [
+        {
+          "gpio": "GPIO2",
+          "function": "L/R",
+          "description": "声道选择",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO3",
+          "function": "SCK",
+          "description": "位时钟信号",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO4",
+          "function": "WS",
+          "description": "字选择信号",
+          "status": "已占用"
+        },
+        {
+          "gpio": "GPIO5",
+          "function": "SD",
+          "description": "音频数据输出",
+          "status": "已占用"
+        }
+      ]
+    }
+  ],
+  "allPins": [
+    {
+      "gpio": "GPIO0",
+      "uart": "TX",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "UART发送数据",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO1",
+      "uart": "RX",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "UART接收数据",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO2",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "L/R",
+      "buttons": "-",
+      "description": "声道选择",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO3",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "SCK",
+      "buttons": "-",
+      "description": "位时钟信号",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO4",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "WS",
+      "buttons": "-",
+      "description": "字选择信号",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO5",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "SD",
+      "buttons": "-",
+      "description": "音频数据输出",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO6",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "SDA",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "摇杆数据线",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO7",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "SCL",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "摇杆时钟线",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO8",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "按键1",
+      "description": "用户按键1",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO9",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "按键2",
+      "description": "用户按键2",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO10",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "SCK",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "SD卡时钟",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO11",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "MISO",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "SD卡数据输入",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO12",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "MOSI",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "SD卡数据输出",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO13",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "CS",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "SD卡片选",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO15",
+      "uart": "-",
+      "tftLcd": "RST",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "LCD复位",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO16",
+      "uart": "-",
+      "tftLcd": "BL",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "LCD背光控制",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO17",
+      "uart": "-",
+      "tftLcd": "CS",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "LCD片选",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO18",
+      "uart": "-",
+      "tftLcd": "SCL",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "LCD时钟线",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO19",
+      "uart": "-",
+      "tftLcd": "SDA",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "LCD数据线",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO20",
+      "uart": "-",
+      "tftLcd": "DC",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "LCD数据/命令切换",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO21",
+      "uart": "-",
+      "tftLcd": "TE",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "-",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "LCD清联信号",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO22",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "XMT",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "功放静音使能",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO26",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "DIN",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "音频数据输入",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO27",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "BCLK",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "位时钟信号",
+      "status": "已占用"
+    },
+    {
+      "gpio": "GPIO28",
+      "uart": "-",
+      "tftLcd": "-",
+      "microSd": "-",
+      "joystick": "-",
+      "amplifier": "LRCLK",
+      "microphone": "-",
+      "buttons": "-",
+      "description": "左右声道时钟",
+      "status": "已占用"
+    }
+  ]
+} 

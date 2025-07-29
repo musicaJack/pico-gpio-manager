@@ -1,0 +1,989 @@
+{
+  "pins": [
+    {
+      "id": "GPIO0",
+      "number": 1,
+      "name": "GP0",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "RX"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "TX"
+      },
+      "pwm": {
+        "channel": "PWM0 A",
+        "slice": 0
+      },
+      "position": {
+        "x": 0,
+        "y": 0,
+        "side": "left",
+        "row": 1
+      }
+    },
+    {
+      "id": "GPIO1",
+      "number": 2,
+      "name": "GP1",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "CSn"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "RX"
+      },
+      "pwm": {
+        "channel": "PWM0 B",
+        "slice": 0
+      },
+      "position": {
+        "x": 0,
+        "y": 1,
+        "side": "left",
+        "row": 2
+      }
+    },
+    {
+      "id": "GND",
+      "number": 3,
+      "name": "GND",
+      "function": "GROUND",
+      "voltage": "GND",
+      "description": "接地",
+      "position": {
+        "x": 0,
+        "y": 2,
+        "side": "left",
+        "row": 3
+      }
+    },
+    {
+      "id": "GPIO2",
+      "number": 4,
+      "name": "GP2",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "SCK"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "CTS"
+      },
+      "pwm": {
+        "channel": "PWM1 A",
+        "slice": 1
+      },
+      "position": {
+        "x": 0,
+        "y": 3,
+        "side": "left",
+        "row": 4
+      }
+    },
+    {
+      "id": "GPIO3",
+      "number": 5,
+      "name": "GP3",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "TX"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "RTS"
+      },
+      "pwm": {
+        "channel": "PWM1 B",
+        "slice": 1
+      },
+      "position": {
+        "x": 0,
+        "y": 4,
+        "side": "left",
+        "row": 5
+      }
+    },
+    {
+      "id": "GPIO4",
+      "number": 6,
+      "name": "GP4",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "RX"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "TX"
+      },
+      "pwm": {
+        "channel": "PWM2 A",
+        "slice": 2
+      },
+      "position": {
+        "x": 0,
+        "y": 5,
+        "side": "left",
+        "row": 6
+      }
+    },
+    {
+      "id": "GPIO5",
+      "number": 7,
+      "name": "GP5",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "CSn"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "RX"
+      },
+      "pwm": {
+        "channel": "PWM2 B",
+        "slice": 2
+      },
+      "position": {
+        "x": 0,
+        "y": 6,
+        "side": "left",
+        "row": 7
+      }
+    },
+    {
+      "id": "GND",
+      "number": 8,
+      "name": "GND",
+      "function": "GROUND",
+      "voltage": "GND",
+      "description": "接地",
+      "position": {
+        "x": 0,
+        "y": 7,
+        "side": "left",
+        "row": 8
+      }
+    },
+    {
+      "id": "GPIO6",
+      "number": 9,
+      "name": "GP6",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "SCK"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "CTS"
+      },
+      "pwm": {
+        "channel": "PWM3 A",
+        "slice": 3
+      },
+      "position": {
+        "x": 0,
+        "y": 8,
+        "side": "left",
+        "row": 9
+      }
+    },
+    {
+      "id": "GPIO7",
+      "number": 10,
+      "name": "GP7",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "TX"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "RTS"
+      },
+      "pwm": {
+        "channel": "PWM3 B",
+        "slice": 3
+      },
+      "position": {
+        "x": 0,
+        "y": 9,
+        "side": "left",
+        "row": 10
+      }
+    },
+    {
+      "id": "GPIO8",
+      "number": 11,
+      "name": "GP8",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI1",
+        "role": "RX"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "TX"
+      },
+      "pwm": {
+        "channel": "PWM4 A",
+        "slice": 4
+      },
+      "position": {
+        "x": 0,
+        "y": 10,
+        "side": "left",
+        "row": 11
+      }
+    },
+    {
+      "id": "GPIO9",
+      "number": 12,
+      "name": "GP9",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI1",
+        "role": "CSn"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "RX"
+      },
+      "pwm": {
+        "channel": "PWM4 B",
+        "slice": 4
+      },
+      "position": {
+        "x": 0,
+        "y": 11,
+        "side": "left",
+        "row": 12
+      }
+    },
+    {
+      "id": "GND",
+      "number": 13,
+      "name": "GND",
+      "function": "GROUND",
+      "voltage": "GND",
+      "description": "接地",
+      "position": {
+        "x": 0,
+        "y": 12,
+        "side": "left",
+        "row": 13
+      }
+    },
+    {
+      "id": "GPIO10",
+      "number": 14,
+      "name": "GP10",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI1",
+        "role": "SCK"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "CTS"
+      },
+      "pwm": {
+        "channel": "PWM5 A",
+        "slice": 5
+      },
+      "position": {
+        "x": 0,
+        "y": 13,
+        "side": "left",
+        "row": 14
+      }
+    },
+    {
+      "id": "GPIO11",
+      "number": 15,
+      "name": "GP11",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI1",
+        "role": "TX"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "RTS"
+      },
+      "pwm": {
+        "channel": "PWM5 B",
+        "slice": 5
+      },
+      "position": {
+        "x": 0,
+        "y": 14,
+        "side": "left",
+        "row": 15
+      }
+    },
+    {
+      "id": "GPIO12",
+      "number": 16,
+      "name": "GP12",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI1",
+        "role": "RX"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "TX"
+      },
+      "pwm": {
+        "channel": "PWM6 A",
+        "slice": 6
+      },
+      "position": {
+        "x": 0,
+        "y": 15,
+        "side": "left",
+        "row": 16
+      }
+    },
+    {
+      "id": "GPIO13",
+      "number": 17,
+      "name": "GP13",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI1",
+        "role": "CSn"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "RX"
+      },
+      "pwm": {
+        "channel": "PWM6 B",
+        "slice": 6
+      },
+      "position": {
+        "x": 0,
+        "y": 16,
+        "side": "left",
+        "row": 17
+      }
+    },
+    {
+      "id": "GND",
+      "number": 18,
+      "name": "GND",
+      "function": "GROUND",
+      "voltage": "GND",
+      "description": "接地",
+      "position": {
+        "x": 0,
+        "y": 17,
+        "side": "left",
+        "row": 18
+      }
+    },
+    {
+      "id": "GPIO14",
+      "number": 19,
+      "name": "GP14",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI1",
+        "role": "SCK"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "CTS"
+      },
+      "pwm": {
+        "channel": "PWM7 A",
+        "slice": 7
+      },
+      "position": {
+        "x": 0,
+        "y": 18,
+        "side": "left",
+        "row": 19
+      }
+    },
+    {
+      "id": "GPIO15",
+      "number": 20,
+      "name": "GP15",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI1",
+        "role": "TX"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "RTS"
+      },
+      "pwm": {
+        "channel": "PWM7 B",
+        "slice": 7
+      },
+      "position": {
+        "x": 0,
+        "y": 19,
+        "side": "left",
+        "row": 20
+      }
+    },
+    {
+      "id": "GPIO16",
+      "number": 21,
+      "name": "GP16",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "RX"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "TX"
+      },
+      "pwm": {
+        "channel": "PWM0 A",
+        "slice": 0
+      },
+      "position": {
+        "x": 1,
+        "y": 0,
+        "side": "right",
+        "row": 21
+      }
+    },
+    {
+      "id": "GPIO17",
+      "number": 22,
+      "name": "GP17",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "CSn"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "RX"
+      },
+      "pwm": {
+        "channel": "PWM0 B",
+        "slice": 0
+      },
+      "position": {
+        "x": 1,
+        "y": 1,
+        "side": "right",
+        "row": 22
+      }
+    },
+    {
+      "id": "GND",
+      "number": 23,
+      "name": "GND",
+      "function": "GROUND",
+      "voltage": "GND",
+      "description": "接地",
+      "position": {
+        "x": 1,
+        "y": 2,
+        "side": "right",
+        "row": 23
+      }
+    },
+    {
+      "id": "GPIO18",
+      "number": 24,
+      "name": "GP18",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "SCK"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "CTS"
+      },
+      "pwm": {
+        "channel": "PWM1 A",
+        "slice": 1
+      },
+      "position": {
+        "x": 1,
+        "y": 3,
+        "side": "right",
+        "row": 24
+      }
+    },
+    {
+      "id": "GPIO19",
+      "number": 25,
+      "name": "GP19",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "TX"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "RTS"
+      },
+      "pwm": {
+        "channel": "PWM1 B",
+        "slice": 1
+      },
+      "position": {
+        "x": 1,
+        "y": 4,
+        "side": "right",
+        "row": 25
+      }
+    },
+    {
+      "id": "GPIO20",
+      "number": 26,
+      "name": "GP20",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "RX"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "TX"
+      },
+      "pwm": {
+        "channel": "PWM2 A",
+        "slice": 2
+      },
+      "position": {
+        "x": 1,
+        "y": 5,
+        "side": "right",
+        "row": 26
+      }
+    },
+    {
+      "id": "GPIO21",
+      "number": 27,
+      "name": "GP21",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "CSn"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "RX"
+      },
+      "pwm": {
+        "channel": "PWM2 B",
+        "slice": 2
+      },
+      "position": {
+        "x": 1,
+        "y": 6,
+        "side": "right",
+        "row": 27
+      }
+    },
+    {
+      "id": "GND",
+      "number": 28,
+      "name": "GND",
+      "function": "GROUND",
+      "voltage": "GND",
+      "description": "接地",
+      "position": {
+        "x": 1,
+        "y": 7,
+        "side": "right",
+        "row": 28
+      }
+    },
+    {
+      "id": "GPIO22",
+      "number": 29,
+      "name": "GP22",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "spi": {
+        "interface": "SPI0",
+        "role": "SCK"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "CTS"
+      },
+      "pwm": {
+        "channel": "PWM3 A",
+        "slice": 3
+      },
+      "position": {
+        "x": 1,
+        "y": 8,
+        "side": "right",
+        "row": 29
+      }
+    },
+    {
+      "id": "RUN",
+      "number": 30,
+      "name": "RUN",
+      "function": "POWER",
+      "voltage": "3.3V",
+      "description": "复位引脚",
+      "position": {
+        "x": 1,
+        "y": 9,
+        "side": "right",
+        "row": 30
+      }
+    },
+    {
+      "id": "GPIO26",
+      "number": 31,
+      "name": "GP26",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "adc": {
+        "channel": 0
+      },
+      "spi": {
+        "interface": "SPI1",
+        "role": "SCK"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "CTS"
+      },
+      "pwm": {
+        "channel": "PWM5 A",
+        "slice": 5
+      },
+      "position": {
+        "x": 1,
+        "y": 10,
+        "side": "right",
+        "row": 31
+      }
+    },
+    {
+      "id": "GPIO27",
+      "number": 32,
+      "name": "GP27",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "adc": {
+        "channel": 1
+      },
+      "spi": {
+        "interface": "SPI1",
+        "role": "TX"
+      },
+      "i2c": {
+        "interface": "I2C1",
+        "role": "SCL"
+      },
+      "uart": {
+        "interface": "UART1",
+        "role": "RTS"
+      },
+      "pwm": {
+        "channel": "PWM5 B",
+        "slice": 5
+      },
+      "position": {
+        "x": 1,
+        "y": 11,
+        "side": "right",
+        "row": 32
+      }
+    },
+    {
+      "id": "ADC_GND",
+      "number": 33,
+      "name": "ADC GND",
+      "function": "GROUND",
+      "voltage": "GND",
+      "description": "ADC接地",
+      "position": {
+        "x": 1,
+        "y": 12,
+        "side": "right",
+        "row": 33
+      }
+    },
+    {
+      "id": "GPIO28",
+      "number": 34,
+      "name": "GP28",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "通用GPIO引脚",
+      "adc": {
+        "channel": 2
+      },
+      "spi": {
+        "interface": "SPI1",
+        "role": "RX"
+      },
+      "i2c": {
+        "interface": "I2C0",
+        "role": "SDA"
+      },
+      "uart": {
+        "interface": "UART0",
+        "role": "TX"
+      },
+      "pwm": {
+        "channel": "PWM6 A",
+        "slice": 6
+      },
+      "position": {
+        "x": 1,
+        "y": 13,
+        "side": "right",
+        "row": 34
+      }
+    },
+    {
+      "id": "ADC_VREF",
+      "number": 35,
+      "name": "ADC VRef",
+      "function": "POWER",
+      "voltage": "3.3V",
+      "description": "ADC参考电压",
+      "position": {
+        "x": 1,
+        "y": 14,
+        "side": "right",
+        "row": 35
+      }
+    },
+    {
+      "id": "3V3_OUT",
+      "number": 36,
+      "name": "3V3 Out",
+      "function": "POWER",
+      "voltage": "3.3V",
+      "description": "3.3V输出",
+      "position": {
+        "x": 1,
+        "y": 15,
+        "side": "right",
+        "row": 36
+      }
+    },
+    {
+      "id": "3V3_EN",
+      "number": 37,
+      "name": "3V3 En",
+      "function": "POWER",
+      "voltage": "3.3V",
+      "description": "3.3V使能",
+      "position": {
+        "x": 1,
+        "y": 16,
+        "side": "right",
+        "row": 37
+      }
+    },
+    {
+      "id": "GND",
+      "number": 38,
+      "name": "GND",
+      "function": "GROUND",
+      "voltage": "GND",
+      "description": "接地",
+      "position": {
+        "x": 1,
+        "y": 17,
+        "side": "right",
+        "row": 38
+      }
+    },
+    {
+      "id": "VSYS",
+      "number": 39,
+      "name": "VSYS",
+      "function": "POWER",
+      "voltage": "5V",
+      "description": "系统电压",
+      "position": {
+        "x": 1,
+        "y": 18,
+        "side": "right",
+        "row": 39
+      }
+    },
+    {
+      "id": "VBUS",
+      "number": 40,
+      "name": "VBUS",
+      "function": "POWER",
+      "voltage": "5V",
+      "description": "USB总线电压",
+      "position": {
+        "x": 1,
+        "y": 19,
+        "side": "right",
+        "row": 40
+      }
+    }
+  ]
+} 

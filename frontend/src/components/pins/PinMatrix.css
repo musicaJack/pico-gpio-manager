@@ -1,0 +1,45 @@
+.pin-matrix-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pin-matrix-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 12px;
+}
+
+.pin-canvas {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #fafafa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.pin-canvas:hover {
+  border-color: #1890ff;
+  box-shadow: 0 4px 12px rgba(24,144,255,0.2);
+}
+
+.pin-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .pin-matrix-container {
+    padding: 8px;
+  }
+  
+  .pin-stats {
+    gap: 8px;
+  }
+} 

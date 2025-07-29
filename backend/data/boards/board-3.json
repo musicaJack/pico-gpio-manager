@@ -1,0 +1,248 @@
+{
+  "id": "board-3",
+  "name": "3号板",
+  "description": "RP2040开发板第三版",
+  "version": "3.0",
+  "pins": [
+    {
+      "id": "GPIO0",
+      "number": 1,
+      "name": "GPIO0",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO0 - 可配置为SPI0 RX, I2C0 SDA, UART0 TX",
+      "status": "used",
+      "current": 0,
+      "module": "uart-1"
+    },
+    {
+      "id": "GPIO1",
+      "number": 2,
+      "name": "GPIO1",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO1 - 可配置为SPI0 CSn, I2C0 SCL, UART0 RX",
+      "status": "used",
+      "current": 0,
+      "module": "uart-1"
+    },
+    {
+      "id": "GND",
+      "number": 3,
+      "name": "GND",
+      "function": "GROUND",
+      "voltage": "GND",
+      "description": "接地",
+      "status": "available",
+      "current": 0
+    },
+    {
+      "id": "GPIO2",
+      "number": 4,
+      "name": "GPIO2",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO2 - 可配置为SPI0 SCK, I2C1 SDA",
+      "status": "used",
+      "current": 0,
+      "module": "tft-lcd-1"
+    },
+    {
+      "id": "GPIO3",
+      "number": 5,
+      "name": "GPIO3",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO3 - 可配置为SPI0 TX, I2C1 SCL",
+      "status": "used",
+      "current": 0,
+      "module": "tft-lcd-1"
+    },
+    {
+      "id": "GPIO4",
+      "number": 6,
+      "name": "GPIO4",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO4 - 可配置为SPI0 RX, I2C0 SDA",
+      "status": "used",
+      "current": 0,
+      "module": "tft-lcd-1"
+    },
+    {
+      "id": "GPIO5",
+      "number": 7,
+      "name": "GPIO5",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO5 - 可配置为SPI0 CSn, I2C0 SCL",
+      "status": "used",
+      "current": 0,
+      "module": "tft-lcd-1"
+    },
+    {
+      "id": "GPIO10",
+      "number": 14,
+      "name": "GPIO10",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO10 - 可配置为SPI1 SCK",
+      "status": "used",
+      "current": 0,
+      "module": "microsd-1"
+    },
+    {
+      "id": "GPIO11",
+      "number": 15,
+      "name": "GPIO11",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO11 - 可配置为SPI1 TX",
+      "status": "used",
+      "current": 0,
+      "module": "microsd-1"
+    },
+    {
+      "id": "GPIO12",
+      "number": 16,
+      "name": "GPIO12",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO12 - 可配置为SPI1 RX",
+      "status": "used",
+      "current": 0,
+      "module": "microsd-1"
+    },
+    {
+      "id": "GPIO13",
+      "number": 17,
+      "name": "GPIO13",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO13 - 可配置为SPI1 CSn",
+      "status": "used",
+      "current": 0,
+      "module": "microsd-1"
+    },
+    {
+      "id": "GPIO26",
+      "number": 34,
+      "name": "GPIO26",
+      "function": "ADC",
+      "voltage": "3.3V",
+      "description": "GPIO26 - ADC0",
+      "status": "used",
+      "current": 0,
+      "module": "amplifier-1"
+    },
+    {
+      "id": "GPIO27",
+      "number": 35,
+      "name": "GPIO27",
+      "function": "ADC",
+      "voltage": "3.3V",
+      "description": "GPIO27 - ADC1",
+      "status": "used",
+      "current": 0,
+      "module": "microphone-1"
+    }
+  ],
+  "modules": [
+    {
+      "id": "tft-lcd-1",
+      "name": "TFT显示屏",
+      "type": "TFT_LCD",
+      "interface": "SPI0",
+      "pins": ["GPIO2", "GPIO3", "GPIO4", "GPIO5"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 150,
+        "power": 495
+      },
+      "description": "2.4寸TFT彩色显示屏，SPI接口",
+      "configurable": true,
+      "defaultConfig": {
+        "width": 240,
+        "height": 320,
+        "rotation": 0
+      }
+    },
+    {
+      "id": "microsd-1",
+      "name": "MicroSD卡",
+      "type": "MICROSD",
+      "interface": "SPI1",
+      "pins": ["GPIO10", "GPIO11", "GPIO12", "GPIO13"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 50,
+        "power": 165
+      },
+      "description": "MicroSD存储卡模块",
+      "configurable": true,
+      "defaultConfig": {
+        "csPin": "GPIO13",
+        "speed": 4000000
+      }
+    },
+    {
+      "id": "uart-1",
+      "name": "UART通信",
+      "type": "UART",
+      "interface": "UART0",
+      "pins": ["GPIO0", "GPIO1"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 20,
+        "power": 66
+      },
+      "description": "UART串口通信模块",
+      "configurable": true,
+      "defaultConfig": {
+        "baudrate": 115200,
+        "dataBits": 8,
+        "stopBits": 1
+      }
+    },
+    {
+      "id": "amplifier-1",
+      "name": "功放模块",
+      "type": "AMPLIFIER",
+      "interface": "I2S",
+      "pins": ["GPIO26"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 100,
+        "power": 330
+      },
+      "description": "音频功放模块，I2S接口",
+      "configurable": true,
+      "defaultConfig": {
+        "volume": 0.8,
+        "gain": 20
+      }
+    },
+    {
+      "id": "microphone-1",
+      "name": "拾音器",
+      "type": "MICROPHONE",
+      "interface": "I2S",
+      "pins": ["GPIO27"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 15,
+        "power": 49.5
+      },
+      "description": "麦克风拾音器，I2S接口",
+      "configurable": true,
+      "defaultConfig": {
+        "sensitivity": 0.7,
+        "sampleRate": 16000
+      }
+    }
+  ],
+  "totalPins": 40,
+  "usedPins": 12,
+  "totalModules": 5,
+  "totalPower": 1105.5
+} 

@@ -1,0 +1,285 @@
+{
+  "boardVersions": [
+    {
+      "id": "1号板",
+      "name": "1号板",
+      "description": "老主板 - 基础版本",
+      "manufacturer": "Custom",
+      "revision": "1.0",
+      "powerSupply": "3.3V/5V",
+      "maxCurrent": 1200
+    },
+    {
+      "id": "2号板",
+      "name": "2号板", 
+      "description": "新主板 - 增强版本",
+      "manufacturer": "Custom",
+      "revision": "2.0",
+      "powerSupply": "3.3V/5V",
+      "maxCurrent": 1200
+    },
+    {
+      "id": "3号板",
+      "name": "3号板",
+      "description": "即将生产 - 完整版本",
+      "manufacturer": "Custom", 
+      "revision": "3.0",
+      "powerSupply": "3.3V/5V",
+      "maxCurrent": 1200
+    }
+  ],
+  "interfaceTypes": [
+    {
+      "id": "SPI0",
+      "name": "SPI0",
+      "description": "SPI接口0",
+      "maxFrequency": 125000000,
+      "pins": ["SCK", "MOSI", "MISO", "CS"],
+      "color": "#722ed1"
+    },
+    {
+      "id": "SPI1", 
+      "name": "SPI1",
+      "description": "SPI接口1",
+      "maxFrequency": 125000000,
+      "pins": ["SCK", "MOSI", "MISO", "CS"],
+      "color": "#722ed1"
+    },
+    {
+      "id": "I2C0",
+      "name": "I2C0", 
+      "description": "I2C接口0",
+      "maxFrequency": 1000000,
+      "pins": ["SDA", "SCL"],
+      "color": "#13c2c2"
+    },
+    {
+      "id": "I2C1",
+      "name": "I2C1",
+      "description": "I2C接口1", 
+      "maxFrequency": 1000000,
+      "pins": ["SDA", "SCL"],
+      "color": "#13c2c2"
+    },
+    {
+      "id": "UART0",
+      "name": "UART0",
+      "description": "UART接口0",
+      "maxBaudRate": 921600,
+      "pins": ["TX", "RX", "CTS", "RTS"],
+      "color": "#fa8c16"
+    },
+    {
+      "id": "UART1",
+      "name": "UART1",
+      "description": "UART接口1",
+      "maxBaudRate": 921600,
+      "pins": ["TX", "RX", "CTS", "RTS"],
+      "color": "#fa8c16"
+    },
+    {
+      "id": "I2S0",
+      "name": "I2S0",
+      "description": "I2S接口0",
+      "maxFrequency": 48000000,
+      "pins": ["BCLK", "LRCLK", "DIN", "DOUT"],
+      "color": "#eb2f96"
+    },
+    {
+      "id": "I2S1",
+      "name": "I2S1",
+      "description": "I2S接口1",
+      "maxFrequency": 48000000,
+      "pins": ["BCLK", "LRCLK", "DIN", "DOUT"],
+      "color": "#eb2f96"
+    },
+    {
+      "id": "GPIO",
+      "name": "GPIO",
+      "description": "通用输入输出",
+      "maxFrequency": 125000000,
+      "pins": ["IN", "OUT"],
+      "color": "#52c41a"
+    },
+    {
+      "id": "PWM",
+      "name": "PWM",
+      "description": "脉冲宽度调制",
+      "maxFrequency": 125000000,
+      "pins": ["PWM"],
+      "color": "#fa541c"
+    },
+    {
+      "id": "ADC",
+      "name": "ADC",
+      "description": "模数转换器",
+      "maxSampleRate": 500000,
+      "pins": ["ADC"],
+      "color": "#a0d911"
+    }
+  ],
+  "moduleTypes": [
+    {
+      "id": "TFT_LCD",
+      "name": "TFT显示屏",
+      "description": "3.5寸TFT显示转换",
+      "interface": "SPI0",
+      "icon": "DisplayOutlined",
+      "color": "#722ed1",
+      "defaultPins": ["GPIO18", "GPIO19", "GPIO15", "GPIO20", "GPIO17", "GPIO16", "GPIO21"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 150,
+        "power": 495
+      }
+    },
+    {
+      "id": "MICROSD",
+      "name": "MicroSD卡槽",
+      "description": "TF读卡器",
+      "interface": "SPI1",
+      "icon": "HddOutlined",
+      "color": "#722ed1",
+      "defaultPins": ["GPIO10", "GPIO11", "GPIO12", "GPIO13"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 50,
+        "power": 165
+      }
+    },
+    {
+      "id": "JOYSTICK",
+      "name": "摇杆控制器",
+      "description": "游戏摇杆控制",
+      "interface": "I2C1",
+      "icon": "ControlOutlined",
+      "color": "#13c2c2",
+      "defaultPins": ["GPIO6", "GPIO7"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 20,
+        "power": 66
+      }
+    },
+    {
+      "id": "AMPLIFIER",
+      "name": "功放模块",
+      "description": "音频放大器",
+      "interface": "I2S0",
+      "icon": "SoundOutlined",
+      "color": "#eb2f96",
+      "defaultPins": ["GPIO22", "GPIO26", "GPIO27", "GPIO28"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 100,
+        "power": 330
+      }
+    },
+    {
+      "id": "MICROPHONE",
+      "name": "拾音器模块",
+      "description": "麦克风输入",
+      "interface": "I2S1",
+      "icon": "AudioOutlined",
+      "color": "#eb2f96",
+      "defaultPins": ["GPIO2", "GPIO3", "GPIO4", "GPIO5"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 30,
+        "power": 99
+      }
+    },
+    {
+      "id": "UART",
+      "name": "UART通信",
+      "description": "串口通信",
+      "interface": "UART0",
+      "icon": "ApiOutlined",
+      "color": "#fa8c16",
+      "defaultPins": ["GPIO0", "GPIO1"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 10,
+        "power": 33
+      }
+    },
+    {
+      "id": "BUTTONS",
+      "name": "按键模块",
+      "description": "欧姆龙按键",
+      "interface": "GPIO",
+      "icon": "PushpinOutlined",
+      "color": "#52c41a",
+      "defaultPins": ["GPIO8", "GPIO9"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 5,
+        "power": 16.5
+      }
+    },
+    {
+      "id": "IO_EXPANSION",
+      "name": "IO扩展接口",
+      "description": "扩展IO接口",
+      "interface": "GPIO",
+      "icon": "ExpandOutlined",
+      "color": "#52c41a",
+      "defaultPins": ["GPIO6", "GPIO7", "GPIO0", "GPIO1"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 15,
+        "power": 49.5
+      }
+    }
+  ],
+  "pinStatusColors": {
+    "available": "#52c41a",
+    "used": "#1890ff", 
+    "conflict": "#faad14",
+    "critical": "#f5222d"
+  },
+  "systemConstraints": {
+    "powerBudget": {
+      "total": 3960,
+      "reserved": 500,
+      "available": 3460
+    },
+    "timingConstraints": [
+      {
+        "id": "spi_frequency",
+        "type": "frequency",
+        "value": 125000000,
+        "unit": "Hz",
+        "description": "SPI最大频率125MHz"
+      },
+      {
+        "id": "i2c_frequency", 
+        "type": "frequency",
+        "value": 1000000,
+        "unit": "Hz",
+        "description": "I2C最大频率1MHz"
+      },
+      {
+        "id": "uart_baudrate",
+        "type": "frequency",
+        "value": 921600,
+        "unit": "bps",
+        "description": "UART最大波特率921600"
+      }
+    ],
+    "emiConsiderations": [
+      {
+        "id": "high_frequency_shielding",
+        "type": "shielding",
+        "description": "高频信号需要屏蔽",
+        "pins": ["GPIO18", "GPIO19", "GPIO20", "GPIO21"]
+      },
+      {
+        "id": "analog_filtering",
+        "type": "filtering", 
+        "description": "模拟信号需要滤波",
+        "pins": ["GPIO26", "GPIO27", "GPIO28", "GPIO29"]
+      }
+    ]
+  }
+} 

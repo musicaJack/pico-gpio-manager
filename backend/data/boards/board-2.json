@@ -1,0 +1,168 @@
+{
+  "id": "board-2",
+  "name": "2号板",
+  "description": "RP2040开发板第二版",
+  "version": "2.0",
+  "pins": [
+    {
+      "id": "GPIO0",
+      "number": 1,
+      "name": "GPIO0",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO0 - 可配置为SPI0 RX, I2C0 SDA, UART0 TX",
+      "status": "available",
+      "current": 0
+    },
+    {
+      "id": "GPIO1",
+      "number": 2,
+      "name": "GPIO1",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO1 - 可配置为SPI0 CSn, I2C0 SCL, UART0 RX",
+      "status": "available",
+      "current": 0
+    },
+    {
+      "id": "GND",
+      "number": 3,
+      "name": "GND",
+      "function": "GROUND",
+      "voltage": "GND",
+      "description": "接地",
+      "status": "available",
+      "current": 0
+    },
+    {
+      "id": "GPIO2",
+      "number": 4,
+      "name": "GPIO2",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO2 - 可配置为SPI0 SCK, I2C1 SDA",
+      "status": "used",
+      "current": 0,
+      "module": "joystick-1"
+    },
+    {
+      "id": "GPIO3",
+      "number": 5,
+      "name": "GPIO3",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO3 - 可配置为SPI0 TX, I2C1 SCL",
+      "status": "used",
+      "current": 0,
+      "module": "joystick-1"
+    },
+    {
+      "id": "GPIO4",
+      "number": 6,
+      "name": "GPIO4",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO4 - 可配置为SPI0 RX, I2C0 SDA",
+      "status": "used",
+      "current": 0,
+      "module": "joystick-1"
+    },
+    {
+      "id": "GPIO5",
+      "number": 7,
+      "name": "GPIO5",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO5 - 可配置为SPI0 CSn, I2C0 SCL",
+      "status": "used",
+      "current": 0,
+      "module": "joystick-1"
+    },
+    {
+      "id": "GPIO10",
+      "number": 14,
+      "name": "GPIO10",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO10 - 可配置为SPI1 SCK",
+      "status": "used",
+      "current": 0,
+      "module": "microsd-1"
+    },
+    {
+      "id": "GPIO11",
+      "number": 15,
+      "name": "GPIO11",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO11 - 可配置为SPI1 TX",
+      "status": "used",
+      "current": 0,
+      "module": "microsd-1"
+    },
+    {
+      "id": "GPIO12",
+      "number": 16,
+      "name": "GPIO12",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO12 - 可配置为SPI1 RX",
+      "status": "used",
+      "current": 0,
+      "module": "microsd-1"
+    },
+    {
+      "id": "GPIO13",
+      "number": 17,
+      "name": "GPIO13",
+      "function": "GPIO",
+      "voltage": "3.3V",
+      "description": "GPIO13 - 可配置为SPI1 CSn",
+      "status": "used",
+      "current": 0,
+      "module": "microsd-1"
+    }
+  ],
+  "modules": [
+    {
+      "id": "joystick-1",
+      "name": "摇杆控制器",
+      "type": "JOYSTICK",
+      "interface": "I2C0",
+      "pins": ["GPIO2", "GPIO3", "GPIO4", "GPIO5"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 30,
+        "power": 99
+      },
+      "description": "双轴摇杆控制器，I2C接口",
+      "configurable": true,
+      "defaultConfig": {
+        "sensitivity": 0.8,
+        "deadzone": 0.1
+      }
+    },
+    {
+      "id": "microsd-1",
+      "name": "MicroSD卡",
+      "type": "MICROSD",
+      "interface": "SPI1",
+      "pins": ["GPIO10", "GPIO11", "GPIO12", "GPIO13"],
+      "power": {
+        "voltage": "3.3V",
+        "current": 50,
+        "power": 165
+      },
+      "description": "MicroSD存储卡模块",
+      "configurable": true,
+      "defaultConfig": {
+        "csPin": "GPIO13",
+        "speed": 4000000
+      }
+    }
+  ],
+  "totalPins": 40,
+  "usedPins": 8,
+  "totalModules": 2,
+  "totalPower": 264
+} 

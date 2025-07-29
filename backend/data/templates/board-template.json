@@ -1,0 +1,59 @@
+{
+  "version": "3号板",
+  "revision": "3.0",
+  "manufacturer": "Custom",
+  "description": "RP2040主板配置模板",
+  "pins": {},
+  "modules": {},
+  "constraints": {
+    "powerBudget": {
+      "total": 3960,
+      "reserved": 500,
+      "available": 3460,
+      "used": 0
+    },
+    "timingConstraints": [
+      {
+        "id": "spi_frequency",
+        "type": "frequency",
+        "value": 125000000,
+        "unit": "Hz",
+        "description": "SPI最大频率125MHz"
+      },
+      {
+        "id": "i2c_frequency",
+        "type": "frequency", 
+        "value": 1000000,
+        "unit": "Hz",
+        "description": "I2C最大频率1MHz"
+      },
+      {
+        "id": "uart_baudrate",
+        "type": "frequency",
+        "value": 921600,
+        "unit": "bps",
+        "description": "UART最大波特率921600"
+      }
+    ],
+    "emiConsiderations": [
+      {
+        "id": "high_frequency_shielding",
+        "type": "shielding",
+        "description": "高频信号需要屏蔽",
+        "pins": ["GPIO18", "GPIO19", "GPIO20", "GPIO21"]
+      },
+      {
+        "id": "analog_filtering",
+        "type": "filtering",
+        "description": "模拟信号需要滤波", 
+        "pins": ["GPIO26", "GPIO27", "GPIO28", "GPIO29"]
+      }
+    ]
+  },
+  "metadata": {
+    "createdAt": "",
+    "updatedAt": "",
+    "author": "System",
+    "version": "1.0.0"
+  }
+} 

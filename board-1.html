@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>1号主板GPIO占用状态表</title>
+    <style>
+        body {
+            background-color: #f5f7fa;
+            color: #2d3748;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .gpio-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 14px;
+        }
+        
+        .gpio-table caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 15px;
+            background-color: #4a6ee0;
+            color: white;
+            caption-side: top;
+            text-align: center;
+        }
+        
+        .gpio-table th {
+            background-color: #e2e8f0;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: bold;
+            color: #2d3748;
+            border-bottom: 2px solid #cbd5e0;
+        }
+        
+        .gpio-table td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .gpio-table tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        
+        .gpio-table tbody tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .status-occupied {
+            color: #38a169;
+            font-weight: bold;
+        }
+        
+        .status-free {
+            color: #a0aec0;
+        }
+        
+        .module-header {
+            background-color: #4a6ee0;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px 6px 0 0;
+            font-weight: 600;
+            margin-top: 25px;
+        }
+        
+        .note {
+            font-size: 0.9em;
+            color: #718096;
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table class="gpio-table">
+        <caption>1号主板GPIO占用状态表（按引脚正序排列）</caption>
+        <thead>
+            <tr>
+                <th>GPIO编号</th>
+                <th>UART通信</th>
+                <th>TFT-LCD (SPI-0)</th>
+                <th>MicroSD (SPI-1)</th>
+                <th>摇杆 (I2C-1)</th>
+                <th>功放 (I2S-0)</th>
+                <th>拾音器 (I2S-1)</th>
+                <th>功能描述</th>
+                <th>状态</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GPIO0 (TX)</td>
+                <td>TX</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>IO扩展发送数据</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO1 (RX)</td>
+                <td>RX</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>IO扩展接收数据</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO6 (SDA)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SDA</td>
+                <td>-</td>
+                <td>-</td>
+                <td>I2C数据线</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO7 (SCL)</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>SCL</td>
+                <td>-</td>
+                <td>-</td>
+                <td>I2C时钟线</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO8 (TX)</td>
+                <td>TX</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>USB-TTL发送数据</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO9 (RX)</td>
+                <td>RX</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>USB-TTL接收数据</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO10 (BL)</td>
+                <td>-</td>
+                <td>BL</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD背光控制</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO12 (TX)</td>
+                <td>TX</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>4G模块发送数据</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO13 (RX)</td>
+                <td>RX</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>4G模块接收数据</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO15 (RST)</td>
+                <td>-</td>
+                <td>RST</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD重置信号</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO17 (CS)</td>
+                <td>-</td>
+                <td>CS</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD片选信号</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO18 (SCL)</td>
+                <td>-</td>
+                <td>SCL</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD时钟线</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO19 (SDA)</td>
+                <td>-</td>
+                <td>SDA</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD数据线</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+            <tr>
+                <td>GPIO20 (DC)</td>
+                <td>-</td>
+                <td>DC</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>LCD数据/命令选择</td>
+                <td class="status-occupied">已占用</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="note">
+        设计版本：v1.0 | 最后更新：2025年7月
+    </div>
+</body>
+</html>

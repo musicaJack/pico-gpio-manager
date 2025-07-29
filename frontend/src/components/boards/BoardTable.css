@@ -1,0 +1,247 @@
+/* BoardTable 基础样式 */
+.board-table-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.board-table-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-table-card .ant-card-body {
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-table {
+  flex: 1;
+  overflow: auto;
+}
+
+.board-table .ant-table-thead > tr > th {
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 4px;
+  font-size: 12px;
+}
+
+.board-table .ant-table-tbody > tr > td {
+  padding: 6px 4px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.gpio-number {
+  font-weight: 600;
+  color: #1890ff;
+}
+
+.gpio-number.unused {
+  color: #bfbfbf;
+  font-weight: normal;
+}
+
+.occupied {
+  color: #52c41a;
+  font-weight: 500;
+}
+
+.empty {
+  color: #d9d9d9;
+}
+
+.description {
+  color: #666;
+  font-size: 11px;
+}
+
+.description.unused {
+  color: #bfbfbf;
+}
+
+.status-tag {
+  font-size: 11px;
+  padding: 2px 6px;
+}
+
+/* 未使用行的样式 */
+.unused-row {
+  background-color: #fafafa !important;
+}
+
+.unused-row:hover > td {
+  background-color: #f0f0f0 !important;
+}
+
+.table-footer {
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 11px;
+  color: #999;
+  border-top: 1px solid #f0f0f0;
+  background: #fafafa;
+  flex-shrink: 0;
+}
+
+/* 1号主板主题 - 蓝色系 */
+.theme-board-1 .board-table-card .ant-card-head {
+  background: linear-gradient(135deg, #4a6ee0, #6b8cff);
+  color: white;
+}
+
+.theme-board-1 .board-table-card .ant-card-head-title {
+  color: white;
+  font-weight: bold;
+}
+
+.theme-board-1 .ant-table-thead > tr > th {
+  background-color: #e6f7ff;
+  color: #1890ff;
+  border-bottom: 2px solid #91d5ff;
+}
+
+.theme-board-1 .ant-table-tbody > tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.theme-board-1 .ant-table-tbody > tr:nth-child(even) {
+  background-color: #f7faff;
+}
+
+.theme-board-1 .ant-table-tbody > tr:hover > td {
+  background-color: #e6f7ff !important;
+}
+
+.theme-board-1 .unused-row {
+  background-color: #f8f9ff !important;
+}
+
+/* 2号主板主题 - 绿色系 */
+.theme-board-2 .board-table-card .ant-card-head {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: white;
+}
+
+.theme-board-2 .board-table-card .ant-card-head-title {
+  color: white;
+  font-weight: bold;
+}
+
+.theme-board-2 .ant-table-thead > tr > th {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-bottom: 2px solid #81c784;
+}
+
+.theme-board-2 .ant-table-tbody > tr:nth-child(odd) {
+  background-color: #f1f8e9;
+}
+
+.theme-board-2 .ant-table-tbody > tr:nth-child(even) {
+  background-color: #e8f5e9;
+}
+
+.theme-board-2 .ant-table-tbody > tr:hover > td {
+  background-color: #c8e6c9 !important;
+}
+
+.theme-board-2 .gpio-number {
+  color: #2e7d32;
+}
+
+.theme-board-2 .unused-row {
+  background-color: #f1f8e9 !important;
+}
+
+/* 3号主板主题 - 深色系 */
+.theme-board-3 .board-table-card .ant-card-head {
+  background: linear-gradient(135deg, #0a3d62, #1a5276);
+  color: white;
+}
+
+.theme-board-3 .board-table-card .ant-card-head-title {
+  color: white;
+  font-weight: bold;
+}
+
+.theme-board-3 .ant-table-thead > tr > th {
+  background-color: #1e3c59;
+  color: #85c1e9;
+  border-bottom: 2px solid #2c3e50;
+}
+
+.theme-board-3 .ant-table-tbody > tr:nth-child(odd) {
+  background-color: #1e3c59;
+  color: #ffffff;
+}
+
+.theme-board-3 .ant-table-tbody > tr:nth-child(even) {
+  background-color: #2a4d6e;
+  color: #ffffff;
+}
+
+.theme-board-3 .ant-table-tbody > tr:hover > td {
+  background-color: #34495e !important;
+}
+
+.theme-board-3 .gpio-number {
+  color: #82e0aa;
+}
+
+.theme-board-3 .occupied {
+  color: #82e0aa;
+}
+
+.theme-board-3 .empty {
+  color: #5d6d7e;
+}
+
+.theme-board-3 .description {
+  color: #bdc3c7;
+}
+
+.theme-board-3 .unused-row {
+  background-color: #1a3c59 !important;
+}
+
+.theme-board-3 .unused-row:hover > td {
+  background-color: #2c3e50 !important;
+}
+
+.theme-board-3 .table-footer {
+  background: #1e3c59;
+  color: #85c1e9;
+  border-top: 1px solid #2c3e50;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .board-table .ant-table-thead > tr > th,
+  .board-table .ant-table-tbody > tr > td {
+    padding: 4px 2px;
+    font-size: 11px;
+  }
+  
+  .board-table-card .ant-card-head-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .board-table-container {
+    height: auto;
+  }
+  
+  .board-table-card {
+    height: auto;
+  }
+  
+  .board-table {
+    overflow-x: auto;
+  }
+} 
