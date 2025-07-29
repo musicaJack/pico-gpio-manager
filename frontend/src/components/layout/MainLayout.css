@@ -83,11 +83,26 @@
   .status-label {
     font-size: 11px;
   }
+  
+  /* 移动端状态卡片优化 */
+  .status-card .ant-card-body {
+    padding: 12px;
+  }
+  
+  .status-item {
+    padding: 6px 0;
+  }
+  
+  /* 调整表格区域 */
+  .board-table-section {
+    margin-top: 12px;
+  }
 }
 
 @media (max-width: 480px) {
   .main-content {
     padding: 8px;
+    height: calc(100vh - 48px);
   }
   
   .status-value {
@@ -96,5 +111,55 @@
   
   .status-label {
     font-size: 10px;
+  }
+  
+  /* 小屏幕状态卡片进一步优化 */
+  .status-card .ant-card-body {
+    padding: 8px;
+  }
+  
+  .status-item {
+    padding: 4px 0;
+  }
+  
+  /* 调整表格区域 */
+  .board-table-section {
+    margin-top: 8px;
+  }
+  
+  /* 无数据内容调整 */
+  .no-data-content p {
+    font-size: 14px;
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 360px) {
+  .main-content {
+    padding: 6px;
+  }
+  
+  .status-value {
+    font-size: 16px;
+  }
+  
+  .status-label {
+    font-size: 9px;
+  }
+  
+  .status-card .ant-card-body {
+    padding: 6px;
+  }
+  
+  .status-item {
+    padding: 3px 0;
+  }
+  
+  .board-table-section {
+    margin-top: 6px;
+  }
+  
+  .no-data-content p {
+    font-size: 12px;
   }
 } 

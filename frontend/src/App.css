@@ -22,6 +22,80 @@
   .main-content {
     padding: 16px !important;
   }
+  
+  /* 移动端Header样式 */
+  .app-header .ant-layout-header {
+    padding: 0 16px !important;
+    min-height: 56px !important;
+    height: auto !important;
+  }
+  
+  /* 隐藏桌面端按钮，显示移动端菜单 */
+  .desktop-buttons {
+    display: none !important;
+  }
+  
+  .mobile-menu {
+    display: block !important;
+  }
+  
+  .mobile-menu .ant-btn {
+    display: block !important;
+  }
+  
+  /* 调整标题大小 */
+  .app-header h1 {
+    font-size: 16px !important;
+  }
+  
+  /* 调整主板选择器 */
+  .app-header .ant-select {
+    width: 100px !important;
+    min-width: 100px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 0 12px !important;
+  }
+  
+  .main-content {
+    padding: 12px !important;
+  }
+  
+  /* 更小屏幕的Header样式 */
+  .app-header .ant-layout-header {
+    padding: 0 12px !important;
+    min-height: 48px !important;
+  }
+  
+  /* 进一步缩小标题 */
+  .app-header h1 {
+    font-size: 14px !important;
+  }
+  
+  /* 调整主板选择器 */
+  .app-header .ant-select {
+    width: 80px !important;
+    min-width: 80px !important;
+  }
+  
+  /* 调整标签文字 */
+  .app-header span {
+    font-size: 12px !important;
+  }
+}
+
+/* 桌面端显示桌面按钮，隐藏移动端菜单 */
+@media (min-width: 769px) {
+  .desktop-buttons {
+    display: flex !important;
+  }
+  
+  .mobile-menu {
+    display: none !important;
+  }
 }
 
 /* 自定义滚动条 */

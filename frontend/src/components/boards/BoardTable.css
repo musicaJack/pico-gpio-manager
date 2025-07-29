@@ -284,4 +284,73 @@
   .board-table {
     overflow-x: auto;
   }
+  
+  /* 移动端表格优化 */
+  .board-table .ant-table-thead > tr > th,
+  .board-table .ant-table-tbody > tr > td {
+    padding: 3px 1px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  
+  .board-table-card .ant-card-head-title {
+    font-size: 12px;
+  }
+  
+  .pin-number {
+    font-size: 9px;
+    padding: 1px 4px;
+  }
+  
+  .status-tag {
+    font-size: 9px;
+    padding: 1px 4px;
+  }
+  
+  .description {
+    font-size: 9px;
+  }
+  
+  .table-footer {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 小屏幕进一步优化 */
+  .board-table .ant-table-thead > tr > th,
+  .board-table .ant-table-tbody > tr > td {
+    padding: 2px 1px;
+    font-size: 9px;
+  }
+  
+  .board-table-card .ant-card-head-title {
+    font-size: 11px;
+  }
+  
+  .pin-number {
+    font-size: 8px;
+    padding: 1px 3px;
+  }
+  
+  .status-tag {
+    font-size: 8px;
+    padding: 1px 3px;
+  }
+  
+  .description {
+    font-size: 8px;
+  }
+  
+  .table-footer {
+    padding: 4px 8px;
+    font-size: 9px;
+  }
+  
+  /* 隐藏一些不太重要的列 */
+  .board-table .ant-table-thead > tr > th:nth-child(4),
+  .board-table .ant-table-tbody > tr > td:nth-child(4) {
+    display: none;
+  }
 } 
