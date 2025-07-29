@@ -1,6 +1,12 @@
 # 多阶段构建 Dockerfile
 FROM node:18-alpine AS base
 
+# 设置 Alpine 镜像源为清华源
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
+
+# 设置 npm 镜像源为淘宝源
+RUN npm config set registry https://registry.npmmirror.com/
+
 # 设置工作目录
 WORKDIR /app
 
@@ -24,6 +30,9 @@ RUN npm run build
 # 前端生产镜像
 FROM nginx:alpine AS frontend
 
+# 设置 Alpine 镜像源为清华源
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
+
 # 复制前端构建产物
 COPY --from=builder /app/frontend/dist /usr/share/nginx/html
 COPY docker/nginx-frontend.conf /etc/nginx/nginx.conf
@@ -40,6 +49,12 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 # 后端生产镜像
 FROM node:18-alpine AS backend
+
+# 设置 Alpine 镜像源为清华源
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apk/repositories
+
+# 设置 npm 镜像源为淘宝源
+RUN npm config set registry https://registry.npmmirror.com/
 
 # 设置工作目录
 WORKDIR /app

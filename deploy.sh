@@ -18,14 +18,6 @@ if ! command -v docker-compose &> /dev/null; then
     exit 1
 fi
 
-# 停止现有容器
-echo "📦 停止现有容器..."
-docker-compose down --remove-orphans
-
-# 清理旧镜像
-echo "🧹 清理旧镜像..."
-docker image prune -f
-
 # 构建新镜像
 echo "🔨 构建新镜像..."
 docker-compose build --no-cache
