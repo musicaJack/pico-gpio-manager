@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { ConfigLoader } from '../services/configLoader';
+import { ERROR_MESSAGES, SUCCESS_MESSAGES } from '../config/constants';
 
 // 主板版本常量
 const BOARD_VERSIONS = {
@@ -9,105 +10,104 @@ const BOARD_VERSIONS = {
 } as const;
 
 export class BoardController {
-  // 获取所有主板版本
-  static async getBoardVersions(req: Request, res: Response) {
+  /**
+   * 获取所有可用的板版本
+   */
+  static async getBoardVersions(_req: Request, res: Response) {
     try {
       const versions = Object.values(BOARD_VERSIONS);
       res.json({
         success: true,
-        data: versions
+        data: versions,
+        message: SUCCESS_MESSAGES.CONFIG_LOADED
       });
     } catch (error) {
+      console.error('Error getting board versions:', error);
       res.status(500).json({
         success: false,
-        message: '获取主板版本失败',
-        error: error instanceof Error ? error.message : '未知错误'
+        error: ERROR_MESSAGES.FILE_NOT_FOUND
       });
     }
   }
 
-  // 获取指定主板的配置
+  /**
+   * 获取指定板的配置信息
+   */
   static async getBoardConfig(req: Request, res: Response) {
     try {
       const { boardId } = req.params;
       
       if (!boardId) {
-        return res.status(400).json({
+        res.status(400).json({
           success: false,
-          message: '主板ID不能为空'
+          error: ERROR_MESSAGES.INVALID_CONFIG
         });
-      }
-      
-      // 验证主板ID
-      if (!Object.values(BOARD_VERSIONS).includes(boardId as any)) {
-        return res.status(400).json({
-          success: false,
-          message: '无效的主板版本'
-        });
+        return;
       }
 
-      // 加载主板配置
       const configLoader = ConfigLoader.getInstance();
-      
-      // 清除缓存以确保获取最新数据
-      configLoader.clearCacheItem(`board-${boardId}`);
-      
       const boardConfig = await configLoader.loadBoardConfig(boardId);
       
       if (!boardConfig) {
-        return res.status(404).json({
+        res.status(404).json({
           success: false,
-          message: '主板配置不存在'
+          error: ERROR_MESSAGES.BOARD_NOT_FOUND
         });
+        return;
       }
 
       res.json({
         success: true,
-        data: boardConfig
+        data: boardConfig,
+        message: SUCCESS_MESSAGES.CONFIG_LOADED
       });
     } catch (error) {
+      console.error('Error getting board config:', error);
       res.status(500).json({
         success: false,
-        message: '获取主板配置失败',
-        error: error instanceof Error ? error.message : '未知错误'
+        error: ERROR_MESSAGES.FILE_NOT_FOUND
       });
     }
   }
 
-  // 获取所有引脚定义
-  static async getPins(req: Request, res: Response) {
+  /**
+   * 获取指定板的所有引脚信息
+   */
+  static async getPins(_req: Request, res: Response) {
     try {
       const configLoader = ConfigLoader.getInstance();
       const pins = await configLoader.loadPinDefinitions();
-      
       res.json({
         success: true,
-        data: pins
+        data: pins,
+        message: SUCCESS_MESSAGES.CONFIG_LOADED
       });
     } catch (error) {
+      console.error('Error getting pins:', error);
       res.status(500).json({
         success: false,
-        message: '获取引脚定义失败',
-        error: error instanceof Error ? error.message : '未知错误'
+        error: ERROR_MESSAGES.FILE_NOT_FOUND
       });
     }
   }
 
-  // 获取所有模块定义
-  static async getModules(req: Request, res: Response) {
+  /**
+   * 获取指定板的模块信息
+   */
+  static async getModules(_req: Request, res: Response) {
     try {
       const configLoader = ConfigLoader.getInstance();
       const modules = await configLoader.loadSystemConfig();
-      
       res.json({
         success: true,
-        data: modules
+        data: modules,
+        message: SUCCESS_MESSAGES.CONFIG_LOADED
       });
     } catch (error) {
+      console.error('Error getting modules:', error);
       res.status(500).json({
         success: false,
-        message: '获取模块定义失败',
-        error: error instanceof Error ? error.message : '未知错误'
+        error: ERROR_MESSAGES.FILE_NOT_FOUND
       });
     }
   }

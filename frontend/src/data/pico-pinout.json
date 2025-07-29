@@ -1,0 +1,288 @@
+{
+  "picoPinout": [
+    {
+      "pinNumber": 1,
+      "gpio": "GPIO0",
+      "functions": ["SPI0 RX", "I2C0 SDA", "UART0 TX"],
+      "description": "GPIO0 - 可配置为SPI0 RX, I2C0 SDA, UART0 TX"
+    },
+    {
+      "pinNumber": 2,
+      "gpio": "GPIO1",
+      "functions": ["SPI0 CSn", "I2C0 SCL", "UART0 RX"],
+      "description": "GPIO1 - 可配置为SPI0 CSn, I2C0 SCL, UART0 RX"
+    },
+    {
+      "pinNumber": 3,
+      "gpio": "GND",
+      "functions": ["Ground"],
+      "description": "接地"
+    },
+    {
+      "pinNumber": 4,
+      "gpio": "GPIO2",
+      "functions": ["SPI0 SCK", "I2C1 SDA"],
+      "description": "GPIO2 - 可配置为SPI0 SCK, I2C1 SDA"
+    },
+    {
+      "pinNumber": 5,
+      "gpio": "GPIO3",
+      "functions": ["SPI0 TX", "I2C1 SCL"],
+      "description": "GPIO3 - 可配置为SPI0 TX, I2C1 SCL"
+    },
+    {
+      "pinNumber": 6,
+      "gpio": "GPIO4",
+      "functions": ["SPI0 RX", "I2C0 SDA"],
+      "description": "GPIO4 - 可配置为SPI0 RX, I2C0 SDA"
+    },
+    {
+      "pinNumber": 7,
+      "gpio": "GPIO5",
+      "functions": ["SPI0 CSn", "I2C0 SCL"],
+      "description": "GPIO5 - 可配置为SPI0 CSn, I2C0 SCL"
+    },
+    {
+      "pinNumber": 8,
+      "gpio": "GND",
+      "functions": ["Ground"],
+      "description": "接地"
+    },
+    {
+      "pinNumber": 9,
+      "gpio": "GPIO6",
+      "functions": ["SPI0 SCK"],
+      "description": "GPIO6 - 可配置为SPI0 SCK"
+    },
+    {
+      "pinNumber": 10,
+      "gpio": "GPIO7",
+      "functions": ["SPI0 TX"],
+      "description": "GPIO7 - 可配置为SPI0 TX"
+    },
+    {
+      "pinNumber": 11,
+      "gpio": "GPIO8",
+      "functions": ["SPI1 RX"],
+      "description": "GPIO8 - 可配置为SPI1 RX"
+    },
+    {
+      "pinNumber": 12,
+      "gpio": "GPIO9",
+      "functions": ["SPI1 CSn"],
+      "description": "GPIO9 - 可配置为SPI1 CSn"
+    },
+    {
+      "pinNumber": 13,
+      "gpio": "GND",
+      "functions": ["Ground"],
+      "description": "接地"
+    },
+    {
+      "pinNumber": 14,
+      "gpio": "GPIO10",
+      "functions": ["SPI1 SCK"],
+      "description": "GPIO10 - 可配置为SPI1 SCK"
+    },
+    {
+      "pinNumber": 15,
+      "gpio": "GPIO11",
+      "functions": ["SPI1 TX"],
+      "description": "GPIO11 - 可配置为SPI1 TX"
+    },
+    {
+      "pinNumber": 16,
+      "gpio": "GPIO12",
+      "functions": ["SPI1 RX"],
+      "description": "GPIO12 - 可配置为SPI1 RX"
+    },
+    {
+      "pinNumber": 17,
+      "gpio": "GPIO13",
+      "functions": ["SPI1 CSn"],
+      "description": "GPIO13 - 可配置为SPI1 CSn"
+    },
+    {
+      "pinNumber": 18,
+      "gpio": "GND",
+      "functions": ["Ground"],
+      "description": "接地"
+    },
+    {
+      "pinNumber": 19,
+      "gpio": "GPIO14",
+      "functions": ["SPI1 SCK"],
+      "description": "GPIO14 - 可配置为SPI1 SCK"
+    },
+    {
+      "pinNumber": 20,
+      "gpio": "GPIO15",
+      "functions": ["SPI1 TX"],
+      "description": "GPIO15 - 可配置为SPI1 TX"
+    },
+    {
+      "pinNumber": 21,
+      "gpio": "GPIO16",
+      "functions": ["SPI0 RX"],
+      "description": "GPIO16 - 可配置为SPI0 RX"
+    },
+    {
+      "pinNumber": 22,
+      "gpio": "GPIO17",
+      "functions": ["SPI0 CSn"],
+      "description": "GPIO17 - 可配置为SPI0 CSn"
+    },
+    {
+      "pinNumber": 23,
+      "gpio": "GND",
+      "functions": ["Ground"],
+      "description": "接地"
+    },
+    {
+      "pinNumber": 24,
+      "gpio": "GPIO18",
+      "functions": ["SPI0 SCK"],
+      "description": "GPIO18 - 可配置为SPI0 SCK"
+    },
+    {
+      "pinNumber": 25,
+      "gpio": "GPIO19",
+      "functions": ["SPI0 TX"],
+      "description": "GPIO19 - 可配置为SPI0 TX"
+    },
+    {
+      "pinNumber": 26,
+      "gpio": "GPIO20",
+      "functions": ["SPI0 RX"],
+      "description": "GPIO20 - 可配置为SPI0 RX"
+    },
+    {
+      "pinNumber": 27,
+      "gpio": "GPIO21",
+      "functions": ["SPI0 CSn"],
+      "description": "GPIO21 - 可配置为SPI0 CSn"
+    },
+    {
+      "pinNumber": 28,
+      "gpio": "GND",
+      "functions": ["Ground"],
+      "description": "接地"
+    },
+    {
+      "pinNumber": 29,
+      "gpio": "GPIO22",
+      "functions": ["SPI0 SCK"],
+      "description": "GPIO22 - 可配置为SPI0 SCK"
+    },
+    {
+      "pinNumber": 30,
+      "gpio": "GPIO23",
+      "functions": ["SPI0 TX"],
+      "description": "GPIO23 - 可配置为SPI0 TX"
+    },
+    {
+      "pinNumber": 31,
+      "gpio": "GPIO24",
+      "functions": ["SPI0 RX"],
+      "description": "GPIO24 - 可配置为SPI0 RX"
+    },
+    {
+      "pinNumber": 32,
+      "gpio": "GPIO25",
+      "functions": ["SPI0 CSn"],
+      "description": "GPIO25 - 可配置为SPI0 CSn"
+    },
+    {
+      "pinNumber": 33,
+      "gpio": "GND",
+      "functions": ["Ground"],
+      "description": "接地"
+    },
+    {
+      "pinNumber": 34,
+      "gpio": "GPIO26",
+      "functions": ["ADC0"],
+      "description": "GPIO26 - ADC0"
+    },
+    {
+      "pinNumber": 35,
+      "gpio": "GPIO27",
+      "functions": ["ADC1"],
+      "description": "GPIO27 - ADC1"
+    },
+    {
+      "pinNumber": 36,
+      "gpio": "GPIO28",
+      "functions": ["ADC2"],
+      "description": "GPIO28 - ADC2"
+    },
+    {
+      "pinNumber": 37,
+      "gpio": "GPIO29",
+      "functions": ["ADC3"],
+      "description": "GPIO29 - ADC3"
+    },
+    {
+      "pinNumber": 38,
+      "gpio": "GND",
+      "functions": ["Ground"],
+      "description": "接地"
+    },
+    {
+      "pinNumber": 39,
+      "gpio": "GPIO30",
+      "functions": ["SPI1 RX"],
+      "description": "GPIO30 - 可配置为SPI1 RX"
+    },
+    {
+      "pinNumber": 40,
+      "gpio": "GPIO31",
+      "functions": ["SPI1 CSn"],
+      "description": "GPIO31 - 可配置为SPI1 CSn"
+    }
+  ],
+  "powerPins": [
+    {
+      "pinNumber": 40,
+      "gpio": "VBUS",
+      "functions": ["Power"],
+      "description": "VBUS - USB电源"
+    },
+    {
+      "pinNumber": 39,
+      "gpio": "VSYS",
+      "functions": ["Power"],
+      "description": "VSYS - 系统电源"
+    },
+    {
+      "pinNumber": 37,
+      "gpio": "3V3_EN",
+      "functions": ["Power"],
+      "description": "3V3_EN - 3.3V使能"
+    },
+    {
+      "pinNumber": 36,
+      "gpio": "3V3_OUT",
+      "functions": ["Power"],
+      "description": "3V3_OUT - 3.3V输出"
+    },
+    {
+      "pinNumber": 35,
+      "gpio": "ADC_VREF",
+      "functions": ["Power"],
+      "description": "ADC_VREF - ADC参考电压"
+    },
+    {
+      "pinNumber": 33,
+      "gpio": "ADC_GND",
+      "functions": ["Ground"],
+      "description": "ADC_GND - ADC接地"
+    },
+    {
+      "pinNumber": 30,
+      "gpio": "RUN",
+      "functions": ["Control"],
+      "description": "RUN - 运行控制"
+    }
+  ]
+} 

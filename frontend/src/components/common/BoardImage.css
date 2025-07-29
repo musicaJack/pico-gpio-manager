@@ -1,0 +1,209 @@
+/* 主板图片卡片样式 */
+.board-image-card {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.board-image-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.board-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+}
+
+.board-image-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  margin-bottom: 4px;
+}
+
+.board-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.board-image-thumbnail:hover .board-thumbnail {
+  transform: scale(1.1);
+}
+
+.board-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 4px;
+}
+
+.board-image-thumbnail:hover .board-image-overlay {
+  opacity: 1;
+}
+
+.view-icon {
+  color: white;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.board-image-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.image-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #999;
+  font-size: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+/* 弹窗样式 */
+.board-image-modal .ant-modal-content {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.board-image-modal .ant-modal-header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-bottom: none;
+}
+
+.board-image-modal .ant-modal-title {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.board-image-modal .ant-modal-close {
+  color: white;
+}
+
+.board-image-modal .ant-modal-close:hover {
+  color: #f0f0f0;
+}
+
+.modal-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 400px;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.modal-board-image {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-image-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  color: #999;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  border: 2px dashed #ddd;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .board-image-thumbnail {
+    height: 30px;
+  }
+  
+  .board-image-label {
+    font-size: 11px;
+  }
+  
+  .view-icon {
+    font-size: 10px;
+    padding: 2px;
+  }
+  
+  .modal-image-container {
+    min-height: 300px;
+    padding: 16px;
+  }
+  
+  .modal-board-image {
+    max-height: 350px;
+  }
+  
+  .modal-image-error {
+    height: 300px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .board-image-thumbnail {
+    height: 25px;
+  }
+  
+  .view-icon {
+    font-size: 8px;
+    padding: 1px;
+  }
+  
+  .modal-image-container {
+    min-height: 250px;
+    padding: 12px;
+  }
+  
+  .modal-board-image {
+    max-height: 280px;
+  }
+  
+  .modal-image-error {
+    height: 250px;
+    font-size: 12px;
+  }
+} 

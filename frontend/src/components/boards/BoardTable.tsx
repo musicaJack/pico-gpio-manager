@@ -23,8 +23,35 @@ const BoardTable: React.FC<BoardTableProps> = ({ boardData, boardName }) => {
     }
   };
 
+  // 获取引脚编号的映射
+  const getPinNumber = (gpio: string): number => {
+    const pinMap: Record<string, number> = {
+      'GPIO00': 1, 'GPIO01': 2, 'GPIO02': 4, 'GPIO03': 5, 'GPIO04': 6, 'GPIO05': 7,
+      'GPIO06': 9, 'GPIO07': 10, 'GPIO08': 11, 'GPIO09': 12, 'GPIO10': 14, 'GPIO11': 15,
+      'GPIO12': 16, 'GPIO13': 17, 'GPIO14': 19, 'GPIO15': 20, 'GPIO16': 21, 'GPIO17': 22,
+      'GPIO18': 24, 'GPIO19': 25, 'GPIO20': 26, 'GPIO21': 27, 'GPIO22': 29, 'GPIO23': 30,
+      'GPIO24': 31, 'GPIO25': 32, 'GPIO26': 34, 'GPIO27': 35, 'GPIO28': 36, 'GPIO29': 37,
+      'GPIO30': 39, 'GPIO31': 40
+    };
+    return pinMap[gpio] || 0;
+  };
+
   // 定义表格列
   const columns = [
+    {
+      title: '引脚编号',
+      dataIndex: 'gpio',
+      key: 'pinNumber',
+      width: 80,
+      render: (text: string) => {
+        const pinNumber = getPinNumber(text);
+        return (
+          <span className="pin-number">
+            {pinNumber > 0 ? pinNumber : '-'}
+          </span>
+        );
+      },
+    },
     {
       title: 'GPIO编号',
       dataIndex: 'gpio',
@@ -153,7 +180,7 @@ const BoardTable: React.FC<BoardTableProps> = ({ boardData, boardName }) => {
           rowKey="gpio"
           pagination={false}
           size="small"
-          scroll={{ x: 1200 }}
+          scroll={{ x: 1400 }}
           className="board-table"
           rowClassName={(record) => record.status === '未使用' ? 'unused-row' : ''}
         />

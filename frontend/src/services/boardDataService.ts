@@ -1,6 +1,7 @@
 import board1Data from '../data/board-1.json';
 import board2Data from '../data/board-2.json';
 import board3Data from '../data/board-3.json';
+import picoPinout from '../data/pico-pinout.json';
 import { BOARD_VERSIONS } from './config';
 
 export interface BoardPin {
@@ -39,12 +40,21 @@ export interface BoardData {
   allPins: BoardPin[];
 }
 
+interface PicoPin {
+  pinNumber: number;
+  gpio: string;
+  functions: string[];
+  description: string;
+}
+
 class BoardDataService {
   private boardDataMap: Record<string, BoardData> = {
     [BOARD_VERSIONS.BOARD_1]: board1Data as BoardData,
     [BOARD_VERSIONS.BOARD_2]: board2Data as BoardData,
     [BOARD_VERSIONS.BOARD_3]: board3Data as BoardData,
   };
+
+  private picoPinout: PicoPin[] = picoPinout.picoPinout;
 
   /**
    * 标准化GPIO编号格式
@@ -59,30 +69,30 @@ class BoardDataService {
   }
 
   /**
-   * 生成完整的40个PICO引脚数据
+   * 生成完整的PICO引脚数据
    */
   private generateFullPinData(): BoardPin[] {
     const fullPins: BoardPin[] = [];
     
-    // 生成GPIO0到GPIO29的引脚（PICO有30个GPIO引脚）
-    for (let i = 0; i <= 29; i++) {
-      // 统一使用GPIO00、GPIO01等格式
-      const gpioName = i < 10 ? `GPIO0${i}` : `GPIO${i}`;
-      
-      fullPins.push({
-        gpio: gpioName,
-        uart: "-",
-        tftLcd: "-",
-        microSd: "-",
-        joystick: "-",
-        amplifier: "-",
-        microphone: "-",
-        buttons: "-",
-        switches: "-",
-        description: `${gpioName} - 未使用`,
-        status: "未使用"
-      });
-    }
+    // 使用PICO引脚图信息生成完整的引脚数据
+    this.picoPinout.forEach(pin => {
+      // 跳过电源引脚和接地引脚，只保留GPIO引脚
+      if (pin.gpio.startsWith('GPIO')) {
+        fullPins.push({
+          gpio: this.normalizeGpioName(pin.gpio),
+          uart: "-",
+          tftLcd: "-",
+          microSd: "-",
+          joystick: "-",
+          amplifier: "-",
+          microphone: "-",
+          buttons: "-",
+          switches: "-",
+          description: pin.description,
+          status: "未使用"
+        });
+      }
+    });
 
     return fullPins;
   }
@@ -117,7 +127,7 @@ class BoardDataService {
     const originalData = this.boardDataMap[boardVersion];
     if (!originalData) return null;
 
-    // 生成完整的40个引脚数据
+    // 生成完整的PICO引脚数据
     const fullPins = this.generateFullPinData();
     
     // 合并实际使用的引脚数据
@@ -167,6 +177,13 @@ class BoardDataService {
   getBoardPins(boardVersion: string): BoardPin[] {
     const data = this.getBoardData(boardVersion);
     return data?.allPins || [];
+  }
+
+  /**
+   * 获取PICO引脚图信息
+   */
+  getPicoPinout(): PicoPin[] {
+    return this.picoPinout;
   }
 }
 
