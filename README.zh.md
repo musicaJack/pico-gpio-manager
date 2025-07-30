@@ -11,7 +11,7 @@
 
 **专业的RP2040引脚管理系统 - 可视化配置、冲突检测、代码生成**
 
-[在线演示](https://www.bedigital.cn/gpio-manager/) | [功能特性](#功能特性) | [快速开始](#快速开始) | [部署指南](#部署指南)
+[在线演示](https://www.beingdigital.cn/gpio-manager/) | [功能特性](#功能特性) | [快速开始](#快速开始) | [部署指南](#部署指南)
 
 </div>
 
@@ -176,9 +176,9 @@ chmod +x deploy-production.sh
 
 部署完成后，您可以通过以下地址访问：
 
-- **主应用**: https://www.bedigital.cn/gpio-manager/
-- **API接口**: https://www.bedigital.cn/gpio-manager/api/
-- **健康检查**: https://www.bedigital.cn/gpio-manager/health
+- **主应用**: https://www.beingdigital.cn/gpio-manager/
+- **API接口**: https://www.beingdigital.cn/gpio-manager/api/
+- **健康检查**: https://www.beingdigital.cn/gpio-manager/health
 
 ---
 

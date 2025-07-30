@@ -11,7 +11,7 @@
 
 **Professional RP2040 Pin Management System - Visual Configuration, Conflict Detection, Code Generation**
 
-[Live Demo](https://www.bedigital.cn/gpio-manager/) | [Features](#features) | [Quick Start](#quick-start) | [Deployment](#deployment)
+[Live Demo](https://www.beingdigital.cn/gpio-manager/) | [Features](#features) | [Quick Start](#quick-start) | [Deployment](#deployment)
 
 </div>
 
@@ -176,9 +176,9 @@ chmod +x deploy-production.sh
 
 After deployment, you can access the application at:
 
-- **Main Application**: https://www.bedigital.cn/gpio-manager/
-- **API Interface**: https://www.bedigital.cn/gpio-manager/api/
-- **Health Check**: https://www.bedigital.cn/gpio-manager/health
+- **Main Application**: https://www.beingdigital.cn/gpio-manager/
+- **API Interface**: https://www.beingdigital.cn/gpio-manager/api/
+- **Health Check**: https://www.beingdigital.cn/gpio-manager/health
 
 ---
 

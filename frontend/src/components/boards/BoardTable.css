@@ -2,6 +2,9 @@
 .board-table-container {
   height: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .board-table-card {
@@ -25,11 +28,13 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 }
 
 .board-table {
   flex: 1;
   overflow: auto;
+  min-height: 0;
 }
 
 .board-table .ant-table-thead > tr > th {
@@ -105,6 +110,10 @@
   border-top: 1px solid #f0f0f0;
   background: #fafafa;
   flex-shrink: 0;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 1号主板主题 - 蓝色系 */
@@ -274,17 +283,17 @@
 
 @media (max-width: 768px) {
   .board-table-container {
-    height: auto;
-    min-height: 400px;
+    height: 100%;
+    min-height: 0;
   }
   
   .board-table-card {
-    height: auto;
-    min-height: 400px;
+    height: 100%;
+    min-height: 0;
   }
   
   .board-table-card .ant-card-body {
-    height: 350px;
+    height: 100%;
     overflow: hidden;
   }
   
@@ -329,33 +338,36 @@
   .board-table .ant-table-container {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    height: 100%;
   }
   
   .board-table .ant-table-content {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    height: 100%;
   }
   
   /* 移动端专用滚动优化 */
   .board-table .ant-table-body {
     overflow: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    max-height: 300px !important;
   }
 }
 
 @media (max-width: 480px) {
   /* 小屏幕进一步优化 */
   .board-table-container {
-    min-height: 350px;
+    min-height: 0;
+    height: 100%;
   }
   
   .board-table-card {
-    min-height: 350px;
+    min-height: 0;
+    height: 100%;
   }
   
   .board-table-card .ant-card-body {
-    height: 300px;
+    height: 100%;
   }
   
   .board-table .ant-table-thead > tr > th,
@@ -397,22 +409,23 @@
   .board-table .ant-table-body {
     overflow: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    max-height: 250px !important;
   }
 }
 
 /* 超小屏幕优化 */
 @media (max-width: 360px) {
   .board-table-container {
-    min-height: 300px;
+    min-height: 0;
+    height: 100%;
   }
   
   .board-table-card {
-    min-height: 300px;
+    min-height: 0;
+    height: 100%;
   }
   
   .board-table-card .ant-card-body {
-    height: 250px;
+    height: 100%;
   }
   
   .board-table .ant-table-thead > tr > th,
@@ -448,7 +461,6 @@
   .board-table .ant-table-body {
     overflow: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    max-height: 200px !important;
   }
 }
 
@@ -464,14 +476,13 @@
   }
   
   .board-table-card .ant-card-body {
-    overflow: hidden;
+    overflow: visible;
   }
   
   /* 表格内容区域滚动 */
   .board-table {
-    overflow: auto !important;
+    overflow: visible !important;
     -webkit-overflow-scrolling: touch !important;
-    max-height: none;
   }
   
   /* Ant Design 表格滚动优化 */
@@ -480,22 +491,22 @@
   }
   
   .ant-table {
-    overflow: auto !important;
+    overflow: visible !important;
     -webkit-overflow-scrolling: touch !important;
   }
   
   .ant-table-container {
-    overflow: auto !important;
+    overflow: visible !important;
     -webkit-overflow-scrolling: touch !important;
   }
   
   .ant-table-content {
-    overflow: auto !important;
+    overflow: visible !important;
     -webkit-overflow-scrolling: touch !important;
   }
   
   .ant-table-body {
-    overflow: auto !important;
+    overflow: visible !important;
     -webkit-overflow-scrolling: touch !important;
   }
   

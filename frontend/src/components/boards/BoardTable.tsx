@@ -9,6 +9,39 @@ interface BoardTableProps {
 }
 
 const BoardTable: React.FC<BoardTableProps> = ({ boardData, boardName }) => {
+  const [tableHeight, setTableHeight] = React.useState<string>('calc(100vh - 300px)');
+
+  // 动态计算表格高度
+  React.useEffect(() => {
+    const calculateTableHeight = () => {
+      const viewportHeight = window.innerHeight;
+      const headerHeight = 64; // 头部高度
+      const statusCardsHeight = 80; // 状态卡片高度
+      const padding = 32; // 内边距
+      const footerHeight = 40; // 表格页脚高度
+      const cardHeaderHeight = 48; // 卡片头部高度
+      
+      // 计算可用高度
+      const availableHeight = viewportHeight - headerHeight - statusCardsHeight - padding - footerHeight - cardHeaderHeight;
+      
+      // 设置最小高度为300px，最大高度为可用高度
+      const finalHeight = Math.max(300, Math.min(availableHeight, 600));
+      
+      setTableHeight(`${finalHeight}px`);
+    };
+
+    // 初始计算
+    calculateTableHeight();
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', calculateTableHeight);
+
+    // 清理事件监听器
+    return () => {
+      window.removeEventListener('resize', calculateTableHeight);
+    };
+  }, []);
+
   // 根据boardName确定表格样式主题
   const getThemeClass = (boardName: string) => {
     switch (boardName) {
@@ -180,7 +213,7 @@ const BoardTable: React.FC<BoardTableProps> = ({ boardData, boardName }) => {
           rowKey="gpio"
           pagination={false}
           size="small"
-          scroll={{ x: 1400, y: 400 }}
+          scroll={{ x: 1400, y: tableHeight }}
           className="board-table"
           rowClassName={(record) => record.status === '未使用' ? 'unused-row' : ''}
         />

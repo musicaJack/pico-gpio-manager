@@ -13,7 +13,7 @@ services:
     networks:
       - geotracker_baidu_map_network
     environment:
-      - NGINX_HOST=www.bedigital.cn
+      - NGINX_HOST=www.beingdigital.cn
     volumes:
       - frontend_logs:/var/log/nginx
     depends_on:
@@ -33,7 +33,7 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=5000
-      - CORS_ORIGIN=https://www.bedigital.cn
+      - CORS_ORIGIN=https://www.beingdigital.cn
     volumes:
       - ./data:/app/data
       - backend_logs:/app/logs

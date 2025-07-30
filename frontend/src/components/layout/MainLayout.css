@@ -50,11 +50,14 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   min-height: 0; /* 重要：允许flex子项收缩 */
+  display: flex;
+  flex-direction: column;
 }
 
 /* 无数据卡片样式 */
 .no-data-card {
-  height: 100%;
+  height: auto;
+  min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,7 +78,7 @@
   .main-content {
     padding: 12px;
     height: calc(100vh - 56px);
-    overflow: auto; /* 允许整体滚动 */
+    overflow: hidden;
   }
   
   .status-value {
@@ -99,7 +102,8 @@
   .board-table-section {
     margin-top: 12px;
     flex: 1;
-    min-height: 350px; /* 确保表格有最小高度 */
+    min-height: 0;
+    max-height: calc(100vh - 180px);
   }
 }
 
@@ -107,7 +111,7 @@
   .main-content {
     padding: 8px;
     height: calc(100vh - 48px);
-    overflow: auto;
+    overflow: hidden;
   }
   
   .status-value {
@@ -131,7 +135,8 @@
   .board-table-section {
     margin-top: 8px;
     flex: 1;
-    min-height: 300px;
+    min-height: 0;
+    max-height: calc(100vh - 160px);
   }
   
   /* 无数据内容调整 */
@@ -145,7 +150,7 @@
   .main-content {
     padding: 6px;
     height: calc(100vh - 44px);
-    overflow: auto;
+    overflow: hidden;
   }
   
   .status-value {
@@ -167,7 +172,8 @@
   .board-table-section {
     margin-top: 6px;
     flex: 1;
-    min-height: 250px;
+    min-height: 0;
+    max-height: calc(100vh - 140px);
   }
   
   .no-data-content p {
